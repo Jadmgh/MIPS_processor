@@ -1,5 +1,5 @@
 Flow report for Lab2
-Sun Mar 09 21:27:36 2025
+Mon Mar 10 17:02:15 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 09 21:27:36 2025      ;
+; Flow Status                        ; Successful - Mon Mar 10 17:02:15 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab2                                       ;
 ; Top-level Entity Name              ; Lab2                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 289 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 289 / 114,480 ( < 1 % )                    ;
+; Total logic elements               ; 286 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 285 / 114,480 ( < 1 % )                    ;
 ;     Dedicated logic registers      ; 6 / 114,480 ( < 1 % )                      ;
 ; Total registers                    ; 6                                          ;
 ; Total pins                         ; 129 / 529 ( 24 % )                         ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/09/2025 21:26:50 ;
+; Start date & time ; 03/10/2025 17:01:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab2                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                                                                        ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 264562648614596.174157001018312                                                                                              ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 264562648614592.174164046214624                                                                                              ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                                                           ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                                  ; --            ; --          ; eda_simulation ;
@@ -113,14 +113,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4702 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 5152 MB             ; 00:00:20                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4614 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4685 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4549 MB             ; 00:00:00                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4699 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 5150 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4620 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4689 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4549 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4565 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4565 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:34                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:31                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

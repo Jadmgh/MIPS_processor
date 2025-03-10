@@ -11,7 +11,8 @@ ENTITY control_unit IS
         MemRead  : OUT std_logic;
         MemWrite : OUT std_logic;
         Branch   : OUT std_logic;
-        ALUop    : OUT std_logic_vector(1 DOWNTO 0)
+        ALUop    : OUT std_logic_vector(1 DOWNTO 0);
+		  Jump	: OUT std_logic
     );
 END control_unit;
 
@@ -33,5 +34,6 @@ BEGIN
     MemRead  <= '1' WHEN opCode = "100011" ELSE '0';
     MemWrite <= '1' WHEN opCode = "101011" ELSE '0';
     Branch   <= '1' WHEN opCode = "000100" ELSE '0';
+	 Jump   <= '1' WHEN opCode = "000010" ELSE '0';
     ALUop    <= "10" WHEN opCode = "000000" ELSE "00" WHEN (opCode = "100011" OR opCode = "101011") ELSE "01" WHEN opCode = "000100" ELSE "00";
 END structural;

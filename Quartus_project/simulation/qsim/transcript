@@ -30,5 +30,5 @@
 # Loading work.Lab2_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : Waveform8.vwf.vt(2490)
+# ** Note: $finish    : Waveform8.vwf.vt(1911)
 #    Time: 1 us  Iteration: 0  Instance: /Lab2_vlg_vec_tst/tb_out

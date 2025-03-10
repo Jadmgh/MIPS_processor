@@ -3,111 +3,111 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'GClock'
-Slack : -13.910
-TNS   : -83.390
+Slack : -15.610
+TNS   : -91.642
 
 Type  : Slow 1200mV 85C Model Setup 'RAM_Clock'
-Slack : -12.990
-TNS   : -45.354
+Slack : -13.796
+TNS   : -46.395
 
 Type  : Slow 1200mV 85C Model Setup 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -10.291
-TNS   : -566.764
+Slack : -10.524
+TNS   : -548.555
 
 Type  : Slow 1200mV 85C Model Hold 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -2.399
-TNS   : -90.036
-
-Type  : Slow 1200mV 85C Model Hold 'GClock'
-Slack : 0.236
-TNS   : 0.000
+Slack : -2.587
+TNS   : -122.745
 
 Type  : Slow 1200mV 85C Model Hold 'RAM_Clock'
-Slack : 1.769
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GClock'
+Slack : 0.976
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RAM_Clock'
 Slack : -3.000
-TNS   : -32.623
+TNS   : -38.009
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GClock'
 Slack : -3.000
-TNS   : -16.096
+TNS   : -10.710
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.386
+Slack : 0.424
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'GClock'
-Slack : -12.539
-TNS   : -75.042
+Slack : -14.149
+TNS   : -82.983
 
 Type  : Slow 1200mV 0C Model Setup 'RAM_Clock'
-Slack : -11.750
-TNS   : -40.337
+Slack : -12.487
+TNS   : -41.080
 
 Type  : Slow 1200mV 0C Model Setup 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -9.463
-TNS   : -518.282
+Slack : -9.700
+TNS   : -501.477
 
 Type  : Slow 1200mV 0C Model Hold 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -2.159
-TNS   : -79.485
-
-Type  : Slow 1200mV 0C Model Hold 'GClock'
-Slack : 0.189
-TNS   : 0.000
+Slack : -2.218
+TNS   : -106.883
 
 Type  : Slow 1200mV 0C Model Hold 'RAM_Clock'
-Slack : 1.577
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GClock'
+Slack : 0.856
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RAM_Clock'
 Slack : -3.000
-TNS   : -32.139
+TNS   : -37.437
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GClock'
 Slack : -3.000
-TNS   : -16.008
+TNS   : -10.710
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.319
+Slack : 0.274
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'GClock'
-Slack : -6.448
-TNS   : -37.972
+Slack : -7.337
+TNS   : -42.725
 
 Type  : Fast 1200mV 0C Model Setup 'RAM_Clock'
-Slack : -6.011
-TNS   : -15.007
+Slack : -6.445
+TNS   : -14.815
 
 Type  : Fast 1200mV 0C Model Setup 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -4.836
-TNS   : -266.048
+Slack : -4.749
+TNS   : -256.405
 
 Type  : Fast 1200mV 0C Model Hold 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -1.505
-TNS   : -61.053
+Slack : -1.749
+TNS   : -83.549
 
 Type  : Fast 1200mV 0C Model Hold 'GClock'
-Slack : -0.296
-TNS   : -0.574
+Slack : 0.008
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'RAM_Clock'
-Slack : 0.385
+Slack : 0.105
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RAM_Clock'
 Slack : -3.000
-TNS   : -15.354
+TNS   : -17.551
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GClock'
 Slack : -3.000
-TNS   : -11.665
+TNS   : -9.392
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.191
+Slack : 0.205
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -4,13 +4,13 @@ entity Lab2 is
     port(
         MemToR          : out    vl_logic;
         GReset          : in     vl_logic;
+        RAM_Clock       : in     vl_logic;
         GClock          : in     vl_logic;
         rd1             : out    vl_logic_vector(7 downto 0);
-        RAM_Clock       : in     vl_logic;
         rd2             : out    vl_logic_vector(7 downto 0);
         ALUresults      : out    vl_logic_vector(7 downto 0);
-        ALUsrcn2        : out    vl_logic_vector(31 downto 0);
-        next_pc         : out    vl_logic_vector(7 downto 0);
+        input_PC_BTA    : out    vl_logic_vector(31 downto 0);
+        next_pc4        : out    vl_logic_vector(7 downto 0);
         operation       : out    vl_logic_vector(2 downto 0);
         PCValue         : out    vl_logic_vector(7 downto 0);
         q               : out    vl_logic_vector(31 downto 0);
