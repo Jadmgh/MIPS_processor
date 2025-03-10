@@ -1,0 +1,451 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/09/2025 14:49:34"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Control_testing
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Control_testing_vlg_sample_tst(
+	opCode,
+	sampler_tx
+);
+input [5:0] opCode;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(opCode)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Control_testing_vlg_check_tst (
+	ALUop,
+	ALUSrc,
+	Branch,
+	MemRead,
+	MemToReg,
+	MemWrite,
+	RegDest,
+	RegWrite,
+	sampler_rx
+);
+input [1:0] ALUop;
+input  ALUSrc;
+input  Branch;
+input  MemRead;
+input  MemToReg;
+input  MemWrite;
+input  RegDest;
+input  RegWrite;
+input sampler_rx;
+
+reg [1:0] ALUop_expected;
+reg  ALUSrc_expected;
+reg  Branch_expected;
+reg  MemRead_expected;
+reg  MemToReg_expected;
+reg  MemWrite_expected;
+reg  RegDest_expected;
+reg  RegWrite_expected;
+
+reg [1:0] ALUop_prev;
+reg  ALUSrc_prev;
+reg  Branch_prev;
+reg  MemRead_prev;
+reg  MemToReg_prev;
+reg  MemWrite_prev;
+reg  RegDest_prev;
+reg  RegWrite_prev;
+
+reg [1:0] ALUop_expected_prev;
+reg  ALUSrc_expected_prev;
+reg  Branch_expected_prev;
+reg  MemRead_expected_prev;
+reg  MemToReg_expected_prev;
+reg  MemWrite_expected_prev;
+reg  RegDest_expected_prev;
+reg  RegWrite_expected_prev;
+
+reg [1:0] last_ALUop_exp;
+reg  last_ALUSrc_exp;
+reg  last_Branch_exp;
+reg  last_MemRead_exp;
+reg  last_MemToReg_exp;
+reg  last_MemWrite_exp;
+reg  last_RegDest_exp;
+reg  last_RegWrite_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:8] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 8'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	ALUop_prev = ALUop;
+	ALUSrc_prev = ALUSrc;
+	Branch_prev = Branch;
+	MemRead_prev = MemRead;
+	MemToReg_prev = MemToReg;
+	MemWrite_prev = MemWrite;
+	RegDest_prev = RegDest;
+	RegWrite_prev = RegWrite;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	ALUop_expected_prev = ALUop_expected;
+	ALUSrc_expected_prev = ALUSrc_expected;
+	Branch_expected_prev = Branch_expected;
+	MemRead_expected_prev = MemRead_expected;
+	MemToReg_expected_prev = MemToReg_expected;
+	MemWrite_expected_prev = MemWrite_expected;
+	RegDest_expected_prev = RegDest_expected;
+	RegWrite_expected_prev = RegWrite_expected;
+end
+
+
+// expected ALUop[ 1 ]
+initial
+begin
+	ALUop_expected[1] = 1'bX;
+end 
+// expected ALUop[ 0 ]
+initial
+begin
+	ALUop_expected[0] = 1'bX;
+end 
+
+// expected ALUSrc
+initial
+begin
+	ALUSrc_expected = 1'bX;
+end 
+
+// expected Branch
+initial
+begin
+	Branch_expected = 1'bX;
+end 
+
+// expected MemRead
+initial
+begin
+	MemRead_expected = 1'bX;
+end 
+
+// expected MemToReg
+initial
+begin
+	MemToReg_expected = 1'bX;
+end 
+
+// expected MemWrite
+initial
+begin
+	MemWrite_expected = 1'bX;
+end 
+
+// expected RegDest
+initial
+begin
+	RegDest_expected = 1'bX;
+end 
+
+// expected RegWrite
+initial
+begin
+	RegWrite_expected = 1'bX;
+end 
+// generate trigger
+always @(ALUop_expected or ALUop or ALUSrc_expected or ALUSrc or Branch_expected or Branch or MemRead_expected or MemRead or MemToReg_expected or MemToReg or MemWrite_expected or MemWrite or RegDest_expected or RegDest or RegWrite_expected or RegWrite)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected ALUop = %b | expected ALUSrc = %b | expected Branch = %b | expected MemRead = %b | expected MemToReg = %b | expected MemWrite = %b | expected RegDest = %b | expected RegWrite = %b | ",ALUop_expected_prev,ALUSrc_expected_prev,Branch_expected_prev,MemRead_expected_prev,MemToReg_expected_prev,MemWrite_expected_prev,RegDest_expected_prev,RegWrite_expected_prev);
+	$display("| real ALUop = %b | real ALUSrc = %b | real Branch = %b | real MemRead = %b | real MemToReg = %b | real MemWrite = %b | real RegDest = %b | real RegWrite = %b | ",ALUop_prev,ALUSrc_prev,Branch_prev,MemRead_prev,MemToReg_prev,MemWrite_prev,RegDest_prev,RegWrite_prev);
+`endif
+	if (
+		( ALUop_expected_prev[0] !== 1'bx ) && ( ALUop_prev[0] !== ALUop_expected_prev[0] )
+		&& ((ALUop_expected_prev[0] !== last_ALUop_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUop[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUop_expected_prev);
+		$display ("     Real value = %b", ALUop_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ALUop_exp[0] = ALUop_expected_prev[0];
+	end
+	if (
+		( ALUop_expected_prev[1] !== 1'bx ) && ( ALUop_prev[1] !== ALUop_expected_prev[1] )
+		&& ((ALUop_expected_prev[1] !== last_ALUop_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUop[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUop_expected_prev);
+		$display ("     Real value = %b", ALUop_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_ALUop_exp[1] = ALUop_expected_prev[1];
+	end
+	if (
+		( ALUSrc_expected_prev !== 1'bx ) && ( ALUSrc_prev !== ALUSrc_expected_prev )
+		&& ((ALUSrc_expected_prev !== last_ALUSrc_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ALUSrc :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ALUSrc_expected_prev);
+		$display ("     Real value = %b", ALUSrc_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_ALUSrc_exp = ALUSrc_expected_prev;
+	end
+	if (
+		( Branch_expected_prev !== 1'bx ) && ( Branch_prev !== Branch_expected_prev )
+		&& ((Branch_expected_prev !== last_Branch_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Branch :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Branch_expected_prev);
+		$display ("     Real value = %b", Branch_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_Branch_exp = Branch_expected_prev;
+	end
+	if (
+		( MemRead_expected_prev !== 1'bx ) && ( MemRead_prev !== MemRead_expected_prev )
+		&& ((MemRead_expected_prev !== last_MemRead_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port MemRead :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MemRead_expected_prev);
+		$display ("     Real value = %b", MemRead_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_MemRead_exp = MemRead_expected_prev;
+	end
+	if (
+		( MemToReg_expected_prev !== 1'bx ) && ( MemToReg_prev !== MemToReg_expected_prev )
+		&& ((MemToReg_expected_prev !== last_MemToReg_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port MemToReg :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MemToReg_expected_prev);
+		$display ("     Real value = %b", MemToReg_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_MemToReg_exp = MemToReg_expected_prev;
+	end
+	if (
+		( MemWrite_expected_prev !== 1'bx ) && ( MemWrite_prev !== MemWrite_expected_prev )
+		&& ((MemWrite_expected_prev !== last_MemWrite_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port MemWrite :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", MemWrite_expected_prev);
+		$display ("     Real value = %b", MemWrite_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_MemWrite_exp = MemWrite_expected_prev;
+	end
+	if (
+		( RegDest_expected_prev !== 1'bx ) && ( RegDest_prev !== RegDest_expected_prev )
+		&& ((RegDest_expected_prev !== last_RegDest_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RegDest :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RegDest_expected_prev);
+		$display ("     Real value = %b", RegDest_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_RegDest_exp = RegDest_expected_prev;
+	end
+	if (
+		( RegWrite_expected_prev !== 1'bx ) && ( RegWrite_prev !== RegWrite_expected_prev )
+		&& ((RegWrite_expected_prev !== last_RegWrite_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port RegWrite :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", RegWrite_expected_prev);
+		$display ("     Real value = %b", RegWrite_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_RegWrite_exp = RegWrite_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Control_testing_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [5:0] opCode;
+// wires                                               
+wire [1:0] ALUop;
+wire ALUSrc;
+wire Branch;
+wire MemRead;
+wire MemToReg;
+wire MemWrite;
+wire RegDest;
+wire RegWrite;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Control_testing i1 (
+// port map - connection between master ports and signals/registers   
+	.ALUop(ALUop),
+	.ALUSrc(ALUSrc),
+	.Branch(Branch),
+	.MemRead(MemRead),
+	.MemToReg(MemToReg),
+	.MemWrite(MemWrite),
+	.opCode(opCode),
+	.RegDest(RegDest),
+	.RegWrite(RegWrite)
+);
+// opCode[ 5 ]
+initial
+begin
+	opCode[5] = 1'b1;
+	opCode[5] = #160000 1'b0;
+	opCode[5] = #280000 1'b1;
+	opCode[5] = #240000 1'b0;
+	opCode[5] = #300000 1'b1;
+end 
+// opCode[ 4 ]
+initial
+begin
+	opCode[4] = 1'b0;
+end 
+// opCode[ 3 ]
+initial
+begin
+	opCode[3] = 1'b0;
+	opCode[3] = #440000 1'b1;
+	opCode[3] = #240000 1'b0;
+end 
+// opCode[ 2 ]
+initial
+begin
+	opCode[2] = 1'b0;
+	opCode[2] = #290000 1'b1;
+	opCode[2] = #150000 1'b0;
+end 
+// opCode[ 1 ]
+initial
+begin
+	opCode[1] = 1'b1;
+	opCode[1] = #160000 1'b0;
+	opCode[1] = #280000 1'b1;
+	opCode[1] = #240000 1'b0;
+	opCode[1] = #300000 1'b1;
+end 
+// opCode[ 0 ]
+initial
+begin
+	opCode[0] = 1'b1;
+	opCode[0] = #160000 1'b0;
+	opCode[0] = #280000 1'b1;
+	opCode[0] = #240000 1'b0;
+	opCode[0] = #300000 1'b1;
+end 
+
+Control_testing_vlg_sample_tst tb_sample (
+	.opCode(opCode),
+	.sampler_tx(sampler)
+);
+
+Control_testing_vlg_check_tst tb_out(
+	.ALUop(ALUop),
+	.ALUSrc(ALUSrc),
+	.Branch(Branch),
+	.MemRead(MemRead),
+	.MemToReg(MemToReg),
+	.MemWrite(MemWrite),
+	.RegDest(RegDest),
+	.RegWrite(RegWrite),
+	.sampler_rx(sampler)
+);
+endmodule
+
