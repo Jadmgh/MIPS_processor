@@ -2,9 +2,9 @@ library verilog;
 use verilog.vl_types.all;
 entity Lab2_vlg_check_tst is
     port(
-        ALUresults      : in     vl_logic_vector(7 downto 0);
         input_PC_BTA    : in     vl_logic_vector(31 downto 0);
         MemToR          : in     vl_logic;
+        MuxOut          : in     vl_logic_vector(7 downto 0);
         next_pc4        : in     vl_logic_vector(7 downto 0);
         operation       : in     vl_logic_vector(2 downto 0);
         PCValue         : in     vl_logic_vector(7 downto 0);
