@@ -5,22 +5,16 @@ ENTITY thirtyTwoBitALU IS
     PORT(
         A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
         B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        -- ALU_control mapping:
-        -- 000 : AND
-        -- 001 : OR
-        -- 010 : ADD
-        -- 110 : SUB
-        -- 111 : Set Less Than
-        ALU_control : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+        ALU_control : IN STD_LOGIC_VECTOR(2 DOWNTO 0); -- 0 for ADD, 1 for SUB, 2 for AND, 3 for OR, 4 for set less than
         zero : OUT STD_LOGIC;
         result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-        result8 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		  result8 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
 END thirtyTwoBitALU;
 
 ARCHITECTURE Structural OF thirtyTwoBitALU IS
 
-    -- Sub-components and signals
+    -- define sub-components and signals
     COMPONENT thirtyTwoBitCLA IS
         PORT(
             A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -31,79 +25,88 @@ ARCHITECTURE Structural OF thirtyTwoBitALU IS
         );
     END COMPONENT;
 
-    COMPONENT twoBy32To32Mux IS
+    component twoBy32To32Mux IS
         PORT(
             A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
             B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
             sel : IN STD_LOGIC;
             result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
         );
-    END COMPONENT;
+    END component;
 
-    COMPONENT or32 IS
+    component or32 IS
         PORT(
-            in_vec : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-            out_or : OUT STD_LOGIC
+            in_vec : in  std_logic_vector(31 downto 0);
+            out_or : out std_logic
         );
-    END COMPONENT;
+    END component;
+
+    component sorter32 IS
+        PORT(
+            A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+            B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+            enable : IN STD_LOGIC;
+            C : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+            D : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+        );
+    END component;
 
     signal and_result : STD_LOGIC_VECTOR(31 DOWNTO 0);
     signal or_result : STD_LOGIC_VECTOR(31 DOWNTO 0);
     signal mathematical_result : STD_LOGIC_VECTOR(31 DOWNTO 0);
     signal logical_output : STD_LOGIC_VECTOR(31 DOWNTO 0);
     signal arithmetic_output : STD_LOGIC_VECTOR(31 DOWNTO 0);
+    signal logical_sel : STD_LOGIC;
+    signal arithmetic_sel : STD_LOGIC;
     signal to_sub_or_not_to_sub : STD_LOGIC;
     signal set_less_than : STD_LOGIC_VECTOR(31 DOWNTO 0);
-    signal final : STD_LOGIC_VECTOR(31 DOWNTO 0);
+    signal final: STD_LOGIC_VECTOR(31 DOWNTO 0);
     signal not_zero : STD_LOGIC;
-    signal arithmetic_sel : STD_LOGIC;  -- selects between ADD/SUB result and set-less-than result
+    signal top_level_sel : STD_LOGIC;
+    signal arithmetic_a, arithmetic_b : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 BEGIN
 
-    -------------------------------
-    -- Logical Operations Section
-    -------------------------------
+    -- select logical operation
+
     and_result <= A AND B;
     or_result <= A OR B;
-    -- For logical operations the least-significant bit determines the operation:
-    -- ALU_control = "000" selects AND (0) and "001" selects OR (1)
+    logical_sel <= ALU_control(0);  -- AND is even and OR is ODD
+
     logical_select_mux: twoBy32To32Mux PORT MAP(
         A => and_result,
         B => or_result,
-        sel => ALU_control(0),
+        sel => logical_sel,
         result => logical_output
     );
 
-    -------------------------------
-    -- Arithmetic Operations Section
-    -------------------------------
-    -- For arithmetic operations (when ALU_control(1) = '1'):
-    --   ADD is "010" → ALU_control(2) = '0'
-    --   SUB is "110" → ALU_control(2) = '1'
-    --   Set Less Than is "111" → ALU_control(2) = '1'
-    --
-    -- Determine if subtraction is required (SUB or Set Less Than)
-    to_sub_or_not_to_sub <= ALU_control(2);
+    -- perform arithmetic operation
 
-    arithmetic_unit: thirtyTwoBitCLA PORT MAP(
+    to_sub_or_not_to_sub <= ALU_control(0) or ALU_control(2);  -- subbing for sub and set less than
+
+    sorting: sorter32 PORT MAP(
         A => A,
         B => B,
+        enable => ALU_control(0),
+        C => arithmetic_a,
+        D => arithmetic_b
+    );
+
+    arithmetic_unit: thirtyTwoBitCLA PORT MAP(
+        A => arithmetic_a,
+        B => arithmetic_b,
         sub => to_sub_or_not_to_sub,
         sum => mathematical_result,
         cout => open
     );
 
-    -- Calculate set less than result:
-    -- The result is '1' (in the LSB) if A < B (i.e. the subtraction result is negative)
-    set_less_than <= (31 DOWNTO 1 => '0') & mathematical_result(31);
+    -- calculate set less than
+    set_less_than <= (31 downto 1 => '0') & mathematical_result(31); -- A less than B if sign bit is negative after subtraction
 
-    -- For arithmetic operations, choose between the normal result (for ADD and SUB)
-    -- and the set-less-than result. Use ALU_control(0) in combination with ALU_control(1):
-    --   For ADD ("010"): ALU_control = 0 1 0 → (ALU_control(1)= '1' and ALU_control(0)= '0') → select mathematical_result.
-    --   For SUB ("110"): ALU_control = 1 1 0 → (ALU_control(1)= '1' and ALU_control(0)= '0') → select mathematical_result.
-    --   For SLT ("111"): ALU_control = 1 1 1 → (ALU_control(1)= '1' and ALU_control(0)= '1') → select set_less_than.
-    arithmetic_sel <= ALU_control(0) AND ALU_control(1);
+    -- determine arithmetic selection
+    arithmetic_sel <= ALU_control(2);  -- select set less than if ALU_control(2) is high
 
+    -- select arithmetic output
     arithmetic_select_mux: twoBy32To32Mux PORT MAP(
         A => mathematical_result,
         B => set_less_than,
@@ -111,20 +114,15 @@ BEGIN
         result => arithmetic_output
     );
 
-    -------------------------------
-    -- Top-Level Multiplexer
-    -------------------------------
-    -- Use ALU_control(1) to choose between a logical operation (when '0') and an arithmetic operation (when '1')
+    -- select between logical and arithmetic output
     top_level_mux: twoBy32To32Mux PORT MAP(
-        A => logical_output,        -- when ALU_control(1) = '0'
-        B => arithmetic_output,     -- when ALU_control(1) = '1'
-        sel => ALU_control(1),
+        A => arithmetic_output,
+        B => logical_output,
+        sel => ALU_control(1),  -- and and or are the only options with ALU_control(1) high
         result => final
     );
 
-    -------------------------------
-    -- Zero Detection
-    -------------------------------
+    -- determine if result is zero
     zero_calc: or32 PORT MAP(
         in_vec => final,
         out_or => not_zero
@@ -132,5 +130,5 @@ BEGIN
 
     zero <= not not_zero;
     result <= final;
-    result8 <= final(7 DOWNTO 0);
+	 result8<=final(7 downto 0);
 END Structural;

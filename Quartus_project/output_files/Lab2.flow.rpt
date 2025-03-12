@@ -1,5 +1,5 @@
 Flow report for Lab2
-Wed Mar 12 10:24:52 2025
+Wed Mar 12 11:36:33 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Mar 12 10:24:52 2025      ;
+; Flow Status                        ; Successful - Wed Mar 12 11:36:33 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab2                                       ;
-; Top-level Entity Name              ; testing_alu                                ;
+; Top-level Entity Name              ; Lab2                                       ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 110 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 110 / 114,480 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                        ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 108 / 529 ( 20 % )                         ;
+; Total logic elements               ; 315 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 315 / 114,480 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 6 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 6                                          ;
+; Total pins                         ; 132 / 529 ( 25 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
+; Total memory bits                  ; 10,240 / 3,981,312 ( < 1 % )               ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/12/2025 10:22:03 ;
+; Start date & time ; 03/12/2025 11:35:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab2                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                                                                        ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 264562648614596.174178932338012                                                                                              ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 264562648614596.174179375418844                                                                                              ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                                                           ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                                  ; --            ; --          ; eda_simulation ;
@@ -99,13 +99,12 @@ applicable agreement for further details.
 ; MISC_FILE                           ; lpm_constant3.bsf                                                                                                            ; --            ; --          ; --             ;
 ; MISC_FILE                           ; lpm_constant3.cmp                                                                                                            ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                                                                         ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                                                                                                                     ; --            ; testing_alu ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                                                        ; --            ; testing_alu ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                                                       ; --            ; testing_alu ; Top            ;
+; PARTITION_COLOR                     ; 16764057                                                                                                                     ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                                                        ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                                                       ; --            ; --          ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                                          ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                                        ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                                                 ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; testing_alu                                                                                                                  ; Lab2          ; --          ; --             ;
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
 
 
@@ -114,16 +113,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:15     ; 1.0                     ; 5133 MB             ; 00:00:15                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4596 MB             ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4691 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4561 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4715 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:22     ; 1.0                     ; 5138 MB             ; 00:00:21                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4608 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4698 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4550 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -137,10 +132,6 @@ applicable agreement for further details.
 ; Assembler                 ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-IDH4SBV  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -152,10 +143,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off Lab2 -c Lab2
 quartus_asm --read_settings_files=off --write_settings_files=off Lab2 -c Lab2
 quartus_sta Lab2 -c Lab2
 quartus_eda --read_settings_files=off --write_settings_files=off Lab2 -c Lab2
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Lab2 -c Lab2 --vector_source=C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/Waveform14.vwf --testbench_file=C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/Waveform14.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/ Lab2 -c Lab2
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Lab2 -c Lab2 --vector_source=C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/Waveform14.vwf --testbench_file=C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/Waveform14.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/ Lab2 -c Lab2
 
 
 

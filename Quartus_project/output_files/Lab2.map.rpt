@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Wed Mar 12 10:22:06 2025
+Wed Mar 12 11:35:58 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,11 +13,47 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "thirtyTwoBitALU:inst19|twoBy32To32Mux:arithmetic_select_mux"
- 10. Port Connectivity Checks: "thirtyTwoBitALU:inst19|thirtyTwoBitCLA:arithmetic_unit"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Logic Cells Representing Combinational Loops
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated
+ 15. Source assignments for LPM_RAM_DQ:inst1|altram:sram|altsyncram:ram_block|altsyncram_38a1:auto_generated
+ 16. Parameter Settings for User Entity Instance: LPM_ROM:inst
+ 17. Parameter Settings for User Entity Instance: lpm_constant2:inst17|lpm_constant:LPM_CONSTANT_component
+ 18. Parameter Settings for User Entity Instance: LPM_RAM_DQ:inst1
+ 19. Parameter Settings for User Entity Instance: lpm_constant2:inst183|lpm_constant:LPM_CONSTANT_component
+ 20. Parameter Settings for User Entity Instance: lpm_constant0:inst7|lpm_constant:LPM_CONSTANT_component
+ 21. Parameter Settings for User Entity Instance: lpm_constant1:inst8|lpm_constant:LPM_CONSTANT_component
+ 22. Parameter Settings for User Entity Instance: lpm_constant3:inst29|lpm_constant:LPM_CONSTANT_component
+ 23. Parameter Settings for User Entity Instance: lpm_constant2:inst184|lpm_constant:LPM_CONSTANT_component
+ 24. Port Connectivity Checks: "thirtyTwoBitALU:inst30|twoBy32To32Mux:arithmetic_select_mux"
+ 25. Port Connectivity Checks: "thirtyTwoBitALU:inst30|thirtyTwoBitCLA:arithmetic_unit"
+ 26. Port Connectivity Checks: "thirtyTwoBitALU:inst30|sorter32:sorting|thirtyTwoBitComparator:comp_inst"
+ 27. Port Connectivity Checks: "eightBitALU:inst6|twoBy8To8Mux:arithmetic_select_mux"
+ 28. Port Connectivity Checks: "eightBitALU:inst6|eightBitCLA:arithmetic_unit"
+ 29. Port Connectivity Checks: "eightBitALU:inst6|sorter:sorting|eightBitComparator:comp_inst"
+ 30. Port Connectivity Checks: "MIPS_ALU:inst14|ADDER32BITS_B:incrementor"
+ 31. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:7:BIT_FF"
+ 32. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:7:LOAD_MUX"
+ 33. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:6:BIT_FF"
+ 34. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:6:LOAD_MUX"
+ 35. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:5:BIT_FF"
+ 36. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:5:LOAD_MUX"
+ 37. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:4:BIT_FF"
+ 38. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:4:LOAD_MUX"
+ 39. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:3:BIT_FF"
+ 40. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:3:LOAD_MUX"
+ 41. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:2:BIT_FF"
+ 42. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:2:LOAD_MUX"
+ 43. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:1:BIT_FF"
+ 44. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:1:LOAD_MUX"
+ 45. Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:0:BIT_FF"
+ 46. Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:0:LOAD_MUX"
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -43,18 +79,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 12 10:22:06 2025      ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 12 11:35:58 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Lab2                                       ;
-; Top-level Entity Name              ; testing_alu                                ;
+; Top-level Entity Name              ; Lab2                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 110                                        ;
-;     Total combinational functions  ; 110                                        ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 108                                        ;
+; Total logic elements               ; 315                                        ;
+;     Total combinational functions  ; 315                                        ;
+;     Dedicated logic registers      ; 6                                          ;
+; Total registers                    ; 6                                          ;
+; Total pins                         ; 132                                        ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
+; Total memory bits                  ; 10,240                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -66,7 +102,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; testing_alu        ; Lab2               ;
+; Top-level entity name                                                      ; Lab2               ; Lab2               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,94 +194,382 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
-; twoBy32To32Mux.vhdl              ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/twoBy32To32Mux.vhdl  ;         ;
-; thirtyTwoBitCLA.vhdl             ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/thirtyTwoBitCLA.vhdl ;         ;
-; thirtyTwoBitALU.vhdl             ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/thirtyTwoBitALU.vhdl ;         ;
-; or32.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/or32.vhdl            ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux2.vhd             ;         ;
-; testing_alu.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/testing_alu.bdf      ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
+; eightBitComparator.vhdl          ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/eightBitComparator.vhdl    ;         ;
+; sorter.vhdl                      ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/sorter.vhdl                ;         ;
+; twoBy32To32Mux.vhdl              ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/twoBy32To32Mux.vhdl        ;         ;
+; thirtyTwoBitCLA.vhdl             ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/thirtyTwoBitCLA.vhdl       ;         ;
+; thirtyTwoBitALU.vhdl             ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/thirtyTwoBitALU.vhdl       ;         ;
+; or32.vhdl                        ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/or32.vhdl                  ;         ;
+; twoBy8To8Mux.vhdl                ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/twoBy8To8Mux.vhdl          ;         ;
+; eightBitCLA.vhdl                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/eightBitCLA.vhdl           ;         ;
+; eightBitALU.vhdl                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/eightBitALU.vhdl           ;         ;
+; registerFile.vhdl                ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/registerFile.vhdl          ;         ;
+; eightX8To8Mux.vhdl               ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/eightX8To8Mux.vhdl         ;         ;
+; eightTo1Mux.vhdl                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/eightTo1Mux.vhdl           ;         ;
+; asyncEightBitRegister.vhdl       ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/asyncEightBitRegister.vhdl ;         ;
+; instruction_mem.mif              ; yes             ; User Memory Initialization File    ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/instruction_mem.mif        ;         ;
+; Lab2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/Lab2.bdf                   ;         ;
+; data_memory.mif                  ; yes             ; User Memory Initialization File    ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/data_memory.mif            ;         ;
+; decoder3to8.vhd                  ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/decoder3to8.vhd            ;         ;
+; mux8to1_8bit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux8to1_8bit.vhd           ;         ;
+; mux2to1_8bit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux2to1_8bit.vhd           ;         ;
+; dLatch.vhd                       ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/dLatch.vhd                 ;         ;
+; enARdFF_2.vhd                    ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/enARdFF_2.vhd              ;         ;
+; eightBitRegisterInc.vhd          ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/eightBitRegisterInc.vhd    ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux2.vhd                   ;         ;
+; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant0.vhd          ;         ;
+; lpm_constant1.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant1.vhd          ;         ;
+; mux5.vhd                         ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux5.vhd                   ;         ;
+; sign_extender_16to32.vhd         ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/sign_extender_16to32.vhd   ;         ;
+; control_unit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/control_unit.vhd           ;         ;
+; lpm_constant2.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant2.vhd          ;         ;
+; mux32x2.vhd                      ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux32x2.vhd                ;         ;
+; ALUControl.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/ALUControl.bdf             ;         ;
+; shift_left_2.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/shift_left_2.vhd           ;         ;
+; lpm_constant3.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant3.vhd          ;         ;
+; shift_left_2_26_to_28.vhd        ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/shift_left_2_26_to_28.vhd  ;         ;
+; and2_32bit.vhd                   ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/and2_32bit.vhd             ;         ;
+; or2_32bit.vhd                    ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/or2_32bit.vhd              ;         ;
+; ADDER32BITS_B.vhd                ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/ADDER32BITS_B.vhd          ;         ;
+; mux4x1_32bit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux4x1_32bit.vhd           ;         ;
+; not_32bit.vhd                    ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/not_32bit.vhd              ;         ;
+; zerocomp32.vhd                   ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/zerocomp32.vhd             ;         ;
+; MIPS_ALU.vhd                     ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/MIPS_ALU.vhd               ;         ;
+; mux4x1_1bit.vhd                  ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux4x1_1bit.vhd            ;         ;
+; mux2x1_32bit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux2x1_32bit.vhd           ;         ;
+; mux2x1_1bit.vhd                  ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/mux2x1_1bit.vhd            ;         ;
+; sorter32.vhd                     ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/sorter32.vhd               ;         ;
+; thirtyTwoBitComparator.vhd       ; yes             ; User VHDL File                     ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/thirtyTwoBitComparator.vhd ;         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_rom.tdf                                                                             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                                                                              ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                                                          ;         ;
+; altrom.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.tdf                                                                              ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/others/maxplus2/memmodes.inc                                                                          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                             ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.inc                                                                          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                           ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                                                                              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                                                                            ;         ;
+; db/altsyncram_t811.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/db/altsyncram_t811.tdf     ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.tdf                                                                        ;         ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_ram_dq.tdf                                                                          ;         ;
+; altram.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altram.tdf                                                                              ;         ;
+; db/altsyncram_38a1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/db/altsyncram_38a1.tdf     ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 110               ;
-;                                             ;                   ;
-; Total combinational functions               ; 110               ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 106               ;
-;     -- 3 input functions                    ; 2                 ;
-;     -- <=2 input functions                  ; 2                 ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 110               ;
-;     -- arithmetic mode                      ; 0                 ;
-;                                             ;                   ;
-; Total registers                             ; 0                 ;
-;     -- Dedicated logic registers            ; 0                 ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 108               ;
-; Embedded Multiplier 9-bit elements          ; 0                 ;
-; Maximum fan-out node                        ; ALU_ctrl[1]~input ;
-; Maximum fan-out                             ; 64                ;
-; Total fan-out                               ; 583               ;
-; Average fan-out                             ; 1.79              ;
-+---------------------------------------------+-------------------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 315             ;
+;                                             ;                 ;
+; Total combinational functions               ; 315             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 156             ;
+;     -- 3 input functions                    ; 134             ;
+;     -- <=2 input functions                  ; 25              ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 281             ;
+;     -- arithmetic mode                      ; 34              ;
+;                                             ;                 ;
+; Total registers                             ; 6               ;
+;     -- Dedicated logic registers            ; 6               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 132             ;
+; Total memory bits                           ; 10240           ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; RAM_Clock~input ;
+; Maximum fan-out                             ; 40              ;
+; Total fan-out                               ; 1687            ;
+; Average fan-out                             ; 2.70            ;
++---------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
-+-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
-+-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |testing_alu                            ; 110 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 108  ; 0            ; |testing_alu                                                                        ; work         ;
-;    |thirtyTwoBitALU:inst19|             ; 110 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19                                                 ; work         ;
-;       |or32:zero_calc|                  ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|or32:zero_calc                                  ; work         ;
-;       |thirtyTwoBitCLA:arithmetic_unit| ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|thirtyTwoBitCLA:arithmetic_unit                 ; work         ;
-;       |twoBy32To32Mux:top_level_mux|    ; 64 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux                    ; work         ;
-;          |mux2:\gen_mux:0:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:0:U  ; work         ;
-;          |mux2:\gen_mux:10:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:10:U ; work         ;
-;          |mux2:\gen_mux:11:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:11:U ; work         ;
-;          |mux2:\gen_mux:12:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:12:U ; work         ;
-;          |mux2:\gen_mux:13:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:13:U ; work         ;
-;          |mux2:\gen_mux:14:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:14:U ; work         ;
-;          |mux2:\gen_mux:15:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:15:U ; work         ;
-;          |mux2:\gen_mux:16:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:16:U ; work         ;
-;          |mux2:\gen_mux:17:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:17:U ; work         ;
-;          |mux2:\gen_mux:18:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:18:U ; work         ;
-;          |mux2:\gen_mux:19:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:19:U ; work         ;
-;          |mux2:\gen_mux:1:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:1:U  ; work         ;
-;          |mux2:\gen_mux:20:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:20:U ; work         ;
-;          |mux2:\gen_mux:21:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:21:U ; work         ;
-;          |mux2:\gen_mux:22:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:22:U ; work         ;
-;          |mux2:\gen_mux:23:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:23:U ; work         ;
-;          |mux2:\gen_mux:24:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:24:U ; work         ;
-;          |mux2:\gen_mux:25:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:25:U ; work         ;
-;          |mux2:\gen_mux:26:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:26:U ; work         ;
-;          |mux2:\gen_mux:27:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:27:U ; work         ;
-;          |mux2:\gen_mux:28:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:28:U ; work         ;
-;          |mux2:\gen_mux:29:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:29:U ; work         ;
-;          |mux2:\gen_mux:2:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:2:U  ; work         ;
-;          |mux2:\gen_mux:30:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:30:U ; work         ;
-;          |mux2:\gen_mux:31:U|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:31:U ; work         ;
-;          |mux2:\gen_mux:3:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:3:U  ; work         ;
-;          |mux2:\gen_mux:4:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:4:U  ; work         ;
-;          |mux2:\gen_mux:5:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:5:U  ; work         ;
-;          |mux2:\gen_mux:6:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:6:U  ; work         ;
-;          |mux2:\gen_mux:7:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:7:U  ; work         ;
-;          |mux2:\gen_mux:8:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:8:U  ; work         ;
-;          |mux2:\gen_mux:9:U|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |testing_alu|thirtyTwoBitALU:inst19|twoBy32To32Mux:top_level_mux|mux2:\gen_mux:9:U  ; work         ;
-+-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
++--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
++--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
+; |Lab2                                                        ; 315 (5)           ; 6 (0)        ; 10240       ; 0            ; 0       ; 0         ; 132  ; 0            ; |Lab2                                                                                         ; work         ;
+;    |ALUControl:inst27|                                       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|ALUControl:inst27                                                                       ; work         ;
+;    |MIPS_ALU:inst14|                                         ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14                                                                         ; work         ;
+;       |ADDER32BITS_B:adder|                                  ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|ADDER32BITS_B:adder                                                     ; work         ;
+;       |ADDER32BITS_B:incrementor|                            ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|ADDER32BITS_B:incrementor                                               ; work         ;
+;       |mux2x1_32bit:b_mux|                                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux                                                      ; work         ;
+;          |mux2x1_1bit:mux0|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux0                                     ; work         ;
+;          |mux2x1_1bit:mux1|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux1                                     ; work         ;
+;          |mux2x1_1bit:mux2|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux2                                     ; work         ;
+;          |mux2x1_1bit:mux3|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux3                                     ; work         ;
+;          |mux2x1_1bit:mux4|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux4                                     ; work         ;
+;          |mux2x1_1bit:mux5|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux5                                     ; work         ;
+;          |mux2x1_1bit:mux6|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux6                                     ; work         ;
+;          |mux2x1_1bit:mux7|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux7                                     ; work         ;
+;       |mux4x1_32bit:mux|                                     ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux                                                        ; work         ;
+;          |mux4x1_1bit:mux0|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux0                                       ; work         ;
+;          |mux4x1_1bit:mux1|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux1                                       ; work         ;
+;          |mux4x1_1bit:mux2|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux2                                       ; work         ;
+;          |mux4x1_1bit:mux3|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux3                                       ; work         ;
+;          |mux4x1_1bit:mux4|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux4                                       ; work         ;
+;          |mux4x1_1bit:mux5|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux5                                       ; work         ;
+;          |mux4x1_1bit:mux6|                                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux6                                       ; work         ;
+;          |mux4x1_1bit:mux7|                                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux7                                       ; work         ;
+;    |control_unit:inst9|                                      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|control_unit:inst9                                                                      ; work         ;
+;    |eightBitALU:inst6|                                       ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitALU:inst6                                                                       ; work         ;
+;       |eightBitCLA:arithmetic_unit|                          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitALU:inst6|eightBitCLA:arithmetic_unit                                           ; work         ;
+;    |eightBitRegisterInc:inst4|                               ; 0 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4                                                               ; work         ;
+;       |enARdFF_2:\GEN_BITS:2:BIT_FF|                         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:2:BIT_FF                                  ; work         ;
+;       |enARdFF_2:\GEN_BITS:3:BIT_FF|                         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:3:BIT_FF                                  ; work         ;
+;       |enARdFF_2:\GEN_BITS:4:BIT_FF|                         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:4:BIT_FF                                  ; work         ;
+;       |enARdFF_2:\GEN_BITS:5:BIT_FF|                         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:5:BIT_FF                                  ; work         ;
+;       |enARdFF_2:\GEN_BITS:6:BIT_FF|                         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:6:BIT_FF                                  ; work         ;
+;       |enARdFF_2:\GEN_BITS:7:BIT_FF|                         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:7:BIT_FF                                  ; work         ;
+;    |lpm_ram_dq:inst1|                                        ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_ram_dq:inst1                                                                        ; work         ;
+;       |altram:sram|                                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_ram_dq:inst1|altram:sram                                                            ; work         ;
+;          |altsyncram:ram_block|                              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_ram_dq:inst1|altram:sram|altsyncram:ram_block                                       ; work         ;
+;             |altsyncram_38a1:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_ram_dq:inst1|altram:sram|altsyncram:ram_block|altsyncram_38a1:auto_generated        ; work         ;
+;    |lpm_rom:inst|                                            ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_rom:inst                                                                            ; work         ;
+;       |altrom:srom|                                          ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_rom:inst|altrom:srom                                                                ; work         ;
+;          |altsyncram:rom_block|                              ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                           ; work         ;
+;             |altsyncram_t811:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated            ; work         ;
+;    |mux2to1_8bit:inst24|                                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux2to1_8bit:inst24                                                                     ; work         ;
+;    |mux2to1_8bit:inst33|                                     ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux2to1_8bit:inst33                                                                     ; work         ;
+;    |mux32x2:inst21|                                          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21                                                                          ; work         ;
+;       |mux2:\gen_mux:0:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:0:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:10:mux_inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:10:mux_inst                                                ; work         ;
+;       |mux2:\gen_mux:11:mux_inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:11:mux_inst                                                ; work         ;
+;       |mux2:\gen_mux:12:mux_inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:12:mux_inst                                                ; work         ;
+;       |mux2:\gen_mux:13:mux_inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:13:mux_inst                                                ; work         ;
+;       |mux2:\gen_mux:14:mux_inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:14:mux_inst                                                ; work         ;
+;       |mux2:\gen_mux:1:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:1:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:2:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:2:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:31:mux_inst|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:31:mux_inst                                                ; work         ;
+;       |mux2:\gen_mux:3:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:3:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:4:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:4:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:5:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:5:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:6:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:6:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:7:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:7:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:8:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:8:mux_inst                                                 ; work         ;
+;       |mux2:\gen_mux:9:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux32x2:inst21|mux2:\gen_mux:9:mux_inst                                                 ; work         ;
+;    |mux5:inst10|                                             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux5:inst10                                                                             ; work         ;
+;       |mux2:\gen_mux:0:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux5:inst10|mux2:\gen_mux:0:mux_inst                                                    ; work         ;
+;       |mux2:\gen_mux:1:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux5:inst10|mux2:\gen_mux:1:mux_inst                                                    ; work         ;
+;       |mux2:\gen_mux:2:mux_inst|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux5:inst10|mux2:\gen_mux:2:mux_inst                                                    ; work         ;
+;    |mux8to1_8bit:inst12|                                     ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|mux8to1_8bit:inst12                                                                     ; work         ;
+;    |registerFile:inst22|                                     ; 152 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22                                                                     ; work         ;
+;       |asyncEightBitRegister:\gen_registers:0:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:1:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:2:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:3:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:4:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:5:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:6:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch7 ; work         ;
+;       |asyncEightBitRegister:\gen_registers:7:register_inst| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst                ; work         ;
+;          |d_latch:latch0|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch0 ; work         ;
+;          |d_latch:latch1|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch1 ; work         ;
+;          |d_latch:latch2|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch2 ; work         ;
+;          |d_latch:latch3|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch3 ; work         ;
+;          |d_latch:latch4|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch4 ; work         ;
+;          |d_latch:latch5|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch5 ; work         ;
+;          |d_latch:latch6|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch6 ; work         ;
+;          |d_latch:latch7|                                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch7 ; work         ;
+;       |decoder3to8:decoder|                                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|decoder3to8:decoder                                                 ; work         ;
+;       |eightX8To8Mux:mux_read1|                              ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1                                             ; work         ;
+;          |eightTo1Mux:\gen_mux:0:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:0:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:1:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:1:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:2:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:2:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:3:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:3:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:4:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:4:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:5:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:5:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:6:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:6:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:7:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:7:block_mux:mux_inst   ; work         ;
+;       |eightX8To8Mux:mux_read2|                              ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2                                             ; work         ;
+;          |eightTo1Mux:\gen_mux:0:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:0:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:1:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:1:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:2:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:2:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:3:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:3:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:4:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:4:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:5:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:5:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:6:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:6:block_mux:mux_inst   ; work         ;
+;          |eightTo1Mux:\gen_mux:7:block_mux:mux_inst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:7:block_mux:mux_inst   ; work         ;
++--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                          ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------------+
+; Name                                                                                        ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                 ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------------+
+; lpm_ram_dq:inst1|altram:sram|altsyncram:ram_block|altsyncram_38a1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; data_memory.mif     ;
+; lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ALTSYNCRAM     ; AUTO ; ROM         ; 256          ; 32           ; --           ; --           ; 8192 ; instruction_mem.mif ;
++---------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                       ;
++--------+--------------+---------+--------------+--------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File                                                                                                               ;
++--------+--------------+---------+--------------+--------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Altera ; LPM_CONSTANT ; 13.1    ; N/A          ; N/A          ; |Lab2|lpm_constant0:inst7   ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant0.vhd ;
+; Altera ; LPM_CONSTANT ; 13.1    ; N/A          ; N/A          ; |Lab2|lpm_constant1:inst8   ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant1.vhd ;
+; Altera ; LPM_CONSTANT ; 13.1    ; N/A          ; N/A          ; |Lab2|lpm_constant2:inst17  ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant2.vhd ;
+; Altera ; LPM_CONSTANT ; 13.1    ; N/A          ; N/A          ; |Lab2|lpm_constant3:inst29  ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant3.vhd ;
+; Altera ; LPM_CONSTANT ; 13.1    ; N/A          ; N/A          ; |Lab2|lpm_constant2:inst183 ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant2.vhd ;
+; Altera ; LPM_CONSTANT ; 13.1    ; N/A          ; N/A          ; |Lab2|lpm_constant2:inst184 ; C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/lpm_constant2.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                                     ;
++---------------------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                             ;    ;
++---------------------------------------------------------------------------------------------+----+
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch7|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch6|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch5|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch4|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch3|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch2|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch1|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:2:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:1:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:3:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:5:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:6:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:4:register_inst|d_latch:latch0|Q~0 ;    ;
+; registerFile:inst22|asyncEightBitRegister:\gen_registers:7:register_inst|d_latch:latch0|Q~0 ;    ;
+; Number of logic cells representing combinational loops                                      ; 64 ;
++---------------------------------------------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                      ;
++--------------------------------------------------------------+--------------------------------------------------------------------------+
+; Register name                                                ; Reason for Removal                                                       ;
++--------------------------------------------------------------+--------------------------------------------------------------------------+
+; eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:1:BIT_FF|int_q ; Merged with eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:0:BIT_FF|int_q ;
+; eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:0:BIT_FF|int_q ; Stuck at GND due to stuck port data_in                                   ;
+; Total Number of Removed Registers = 2                        ;                                                                          ;
++--------------------------------------------------------------+--------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -253,18 +577,170 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:1:block_mux:mux_inst|O ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Lab2|registerFile:inst22|eightX8To8Mux:mux_read2|eightTo1Mux:\gen_mux:0:block_mux:mux_inst|O ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Lab2|mux2to1_8bit:inst33|o_data[7]                                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |Lab2|mux8to1_8bit:inst12|Mux6                                                                ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Lab2|mux8to1_8bit:inst12|Mux5                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_RAM_DQ:inst1|altram:sram|altsyncram:ram_block|altsyncram_38a1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                        ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
++---------------------------------+--------------------+------+-------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_ROM:inst     ;
++------------------------+---------------------+----------------+
+; Parameter Name         ; Value               ; Type           ;
++------------------------+---------------------+----------------+
+; LPM_WIDTH              ; 32                  ; Untyped        ;
+; LPM_WIDTHAD            ; 8                   ; Untyped        ;
+; LPM_NUMWORDS           ; 256                 ; Untyped        ;
+; LPM_ADDRESS_CONTROL    ; UNREGISTERED        ; Untyped        ;
+; LPM_OUTDATA            ; REGISTERED          ; Untyped        ;
+; LPM_FILE               ; instruction_mem.mif ; Untyped        ;
+; DEVICE_FAMILY          ; Cyclone IV E        ; Untyped        ;
+; AUTO_CARRY_CHAINS      ; ON                  ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS   ; OFF                 ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS    ; ON                  ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS ; OFF                 ; IGNORE_CASCADE ;
++------------------------+---------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant2:inst17|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+---------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                          ;
++--------------------+------------------+---------------------------------------------------------------+
+; LPM_WIDTH          ; 24               ; Signed Integer                                                ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                                ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
+; CBXI_PARAMETER     ; lpm_constant_8n6 ; Untyped                                                       ;
++--------------------+------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_RAM_DQ:inst1 ;
++------------------------+-----------------+--------------------+
+; Parameter Name         ; Value           ; Type               ;
++------------------------+-----------------+--------------------+
+; LPM_WIDTH              ; 8               ; Untyped            ;
+; LPM_WIDTHAD            ; 8               ; Untyped            ;
+; LPM_NUMWORDS           ; 256             ; Untyped            ;
+; LPM_INDATA             ; REGISTERED      ; Untyped            ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED      ; Untyped            ;
+; LPM_OUTDATA            ; REGISTERED      ; Untyped            ;
+; LPM_FILE               ; data_memory.mif ; Untyped            ;
+; USE_EAB                ; ON              ; Untyped            ;
+; DEVICE_FAMILY          ; Cyclone IV E    ; Untyped            ;
+; CBXI_PARAMETER         ; NOTHING         ; Untyped            ;
+; AUTO_CARRY_CHAINS      ; ON              ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS   ; OFF             ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS    ; ON              ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS ; OFF             ; IGNORE_CASCADE     ;
++------------------------+-----------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant2:inst183|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+----------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                           ;
++--------------------+------------------+----------------------------------------------------------------+
+; LPM_WIDTH          ; 24               ; Signed Integer                                                 ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                                 ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                        ;
+; CBXI_PARAMETER     ; lpm_constant_8n6 ; Untyped                                                        ;
++--------------------+------------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:inst7|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                         ;
++--------------------+------------------+--------------------------------------------------------------+
+; LPM_WIDTH          ; 3                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                               ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_5e6 ; Untyped                                                      ;
++--------------------+------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant1:inst8|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                         ;
++--------------------+------------------+--------------------------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 4                ; Signed Integer                                               ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_uf6 ; Untyped                                                      ;
++--------------------+------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant3:inst29|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+---------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                          ;
++--------------------+------------------+---------------------------------------------------------------+
+; LPM_WIDTH          ; 3                ; Signed Integer                                                ;
+; LPM_CVALUE         ; 2                ; Signed Integer                                                ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
+; CBXI_PARAMETER     ; lpm_constant_7e6 ; Untyped                                                       ;
++--------------------+------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant2:inst184|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+----------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                           ;
++--------------------+------------------+----------------------------------------------------------------+
+; LPM_WIDTH          ; 24               ; Signed Integer                                                 ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                                 ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                        ;
+; CBXI_PARAMETER     ; lpm_constant_8n6 ; Untyped                                                        ;
++--------------------+------------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "thirtyTwoBitALU:inst19|twoBy32To32Mux:arithmetic_select_mux" ;
+; Port Connectivity Checks: "thirtyTwoBitALU:inst30|twoBy32To32Mux:arithmetic_select_mux" ;
 +----------+-------+----------+-----------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                   ;
 +----------+-------+----------+-----------------------------------------------------------+
@@ -273,7 +749,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "thirtyTwoBitALU:inst19|thirtyTwoBitCLA:arithmetic_unit"                             ;
+; Port Connectivity Checks: "thirtyTwoBitALU:inst30|thirtyTwoBitCLA:arithmetic_unit"                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -281,12 +757,210 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "thirtyTwoBitALU:inst30|sorter32:sorting|thirtyTwoBitComparator:comp_inst"             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; a_eq_b ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitALU:inst6|twoBy8To8Mux:arithmetic_select_mux" ;
++---------+-------+----------+-----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                             ;
++---------+-------+----------+-----------------------------------------------------+
+; b[7..1] ; Input ; Info     ; Stuck at GND                                        ;
++---------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitALU:inst6|eightBitCLA:arithmetic_unit"                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitALU:inst6|sorter:sorting|eightBitComparator:comp_inst"                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; a_eq_b ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "MIPS_ALU:inst14|ADDER32BITS_B:incrementor" ;
++----------+-------+----------+-----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                 ;
++----------+-------+----------+-----------------------------------------+
+; b[31..1] ; Input ; Info     ; Stuck at GND                            ;
+; b[0]     ; Input ; Info     ; Stuck at VCC                            ;
++----------+-------+----------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:7:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:7:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:6:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:6:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:5:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:5:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:4:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:4:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:3:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:3:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:2:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:2:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:1:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:1:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:0:BIT_FF"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightBitRegisterInc:inst4|mux2:\GEN_BITS:0:LOAD_MUX" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; sel  ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -296,7 +970,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Mar 12 10:22:03 2025
+    Info: Processing started: Wed Mar 12 11:35:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file eightbitcomparator.vhdl
@@ -422,28 +1096,291 @@ Info (12021): Found 1 design units, including 1 entities, in source file test_ed
 Info (12021): Found 2 design units, including 1 entities, in source file shift_left_2_26_to_28.vhd
     Info (12022): Found design unit 1: shift_left_2_26_to_28-dataflow
     Info (12023): Found entity 1: shift_left_2_26_to_28
-Info (12127): Elaborating entity "testing_alu" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file and2_32bit.vhd
+    Info (12022): Found design unit 1: and2_32bit-structural
+    Info (12023): Found entity 1: and2_32bit
+Info (12021): Found 2 design units, including 1 entities, in source file or2_32bit.vhd
+    Info (12022): Found design unit 1: or2_32bit-structural
+    Info (12023): Found entity 1: or2_32bit
+Info (12021): Found 2 design units, including 1 entities, in source file adder32bits_b.vhd
+    Info (12022): Found design unit 1: ADDER32BITS_B-behv
+    Info (12023): Found entity 1: ADDER32BITS_B
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_32bit.vhd
+    Info (12022): Found design unit 1: mux4x1_32bit-structural
+    Info (12023): Found entity 1: mux4x1_32bit
+Info (12021): Found 2 design units, including 1 entities, in source file not_32bit.vhd
+    Info (12022): Found design unit 1: not_32bit-structural
+    Info (12023): Found entity 1: not_32bit
+Info (12021): Found 2 design units, including 1 entities, in source file zerocomp32.vhd
+    Info (12022): Found design unit 1: zerocomp32-structural
+    Info (12023): Found entity 1: zerocomp32
+Info (12021): Found 2 design units, including 1 entities, in source file sltextend.vhd
+    Info (12022): Found design unit 1: sltextend-structural
+    Info (12023): Found entity 1: sltextend
+Info (12021): Found 2 design units, including 1 entities, in source file mips_alu.vhd
+    Info (12022): Found design unit 1: MIPS_ALU-structural
+    Info (12023): Found entity 1: MIPS_ALU
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_1bit.vhd
+    Info (12022): Found design unit 1: mux4x1_1bit-structural
+    Info (12023): Found entity 1: mux4x1_1bit
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_32bit.vhd
+    Info (12022): Found design unit 1: mux2x1_32bit-structural
+    Info (12023): Found entity 1: mux2x1_32bit
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_1bit.vhd
+    Info (12022): Found design unit 1: mux2x1_1bit-structural
+    Info (12023): Found entity 1: mux2x1_1bit
+Info (12021): Found 2 design units, including 1 entities, in source file sorter32.vhd
+    Info (12022): Found design unit 1: sorter32-Structural
+    Info (12023): Found entity 1: sorter32
+Info (12021): Found 2 design units, including 1 entities, in source file thirtytwobitcomparator.vhd
+    Info (12022): Found design unit 1: thirtyTwoBitComparator-behavioral
+    Info (12023): Found entity 1: thirtyTwoBitComparator
+Info (12127): Elaborating entity "Lab2" for the top level hierarchy
+Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming data_memory.mif was intended to be a quoted string
+Warning (275004): Undeclared parameter REGISTERED
+Warning (275006): Can't find a definition for parameter LPM_INDATA -- assuming REGISTERED was intended to be a quoted string
+Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming instruction_mem.mif was intended to be a quoted string
+Warning (275004): Undeclared parameter UNREGISTERED
+Warning (275006): Can't find a definition for parameter LPM_ADDRESS_CONTROL -- assuming UNREGISTERED was intended to be a quoted string
+Warning (275004): Undeclared parameter REGISTERED
+Warning (275006): Can't find a definition for parameter LPM_OUTDATA -- assuming REGISTERED was intended to be a quoted string
 Warning (275083): Bus "result8[7..0]" found using same base name as "result", which might lead to a name conflict.
 Warning (275080): Converted elements in bus name "result" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "result[31..0]" to "result31..0"
 Warning (275080): Converted elements in bus name "result8" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "result8[7..0]" to "result87..0"
-Info (12128): Elaborating entity "thirtyTwoBitALU" for hierarchy "thirtyTwoBitALU:inst19"
-Info (12128): Elaborating entity "twoBy32To32Mux" for hierarchy "thirtyTwoBitALU:inst19|twoBy32To32Mux:logical_select_mux"
-Info (12128): Elaborating entity "mux2" for hierarchy "thirtyTwoBitALU:inst19|twoBy32To32Mux:logical_select_mux|mux2:\gen_mux:31:U"
-Info (12128): Elaborating entity "thirtyTwoBitCLA" for hierarchy "thirtyTwoBitALU:inst19|thirtyTwoBitCLA:arithmetic_unit"
-Info (12128): Elaborating entity "or32" for hierarchy "thirtyTwoBitALU:inst19|or32:zero_calc"
+Warning (275011): Block or symbol "control_unit" of instance "inst9" overlaps another block or symbol
+Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:inst9"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "LPM_ROM:inst"
+Info (12130): Elaborated megafunction instantiation "LPM_ROM:inst"
+Info (12133): Instantiated megafunction "LPM_ROM:inst" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "instruction_mem.mif"
+    Info (12134): Parameter "LPM_NUMWORDS" = "256"
+    Info (12134): Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+Info (12128): Elaborating entity "altrom" for hierarchy "LPM_ROM:inst|altrom:srom"
+Warning (287001): Assertion warning: Can't convert ROM for Cyclone IV E device family using altsyncram megafunction -- implementing ROM using benchmarking mode by moving output registers to the input side. Power-up states and behavior may be different.
+Info (287000): Assertion information: Clocko port is used as clock for the address input port
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst|altrom:srom", which is child of megafunction instantiation "LPM_ROM:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_ROM:inst|altrom:srom|altsyncram:rom_block"
+Info (12131): Elaborated megafunction instantiation "LPM_ROM:inst|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "LPM_ROM:inst"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_t811.tdf
+    Info (12023): Found entity 1: altsyncram_t811
+Info (12128): Elaborating entity "altsyncram_t811" for hierarchy "LPM_ROM:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated"
+Info (12128): Elaborating entity "eightBitRegisterInc" for hierarchy "eightBitRegisterInc:inst4"
+Info (12128): Elaborating entity "mux2" for hierarchy "eightBitRegisterInc:inst4|mux2:\GEN_BITS:0:LOAD_MUX"
+Info (12128): Elaborating entity "enARdFF_2" for hierarchy "eightBitRegisterInc:inst4|enARdFF_2:\GEN_BITS:0:BIT_FF"
+Info (12128): Elaborating entity "mux2to1_8bit" for hierarchy "mux2to1_8bit:inst33"
+Info (12128): Elaborating entity "MIPS_ALU" for hierarchy "MIPS_ALU:inst14"
+Warning (10541): VHDL Signal Declaration warning at MIPS_ALU.vhd(16): used implicit default value for signal "mux_slt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "and2_32bit" for hierarchy "MIPS_ALU:inst14|and2_32bit:and_unit"
+Info (12128): Elaborating entity "or2_32bit" for hierarchy "MIPS_ALU:inst14|or2_32bit:or_unit"
+Info (12128): Elaborating entity "not_32bit" for hierarchy "MIPS_ALU:inst14|not_32bit:not_unit"
+Info (12128): Elaborating entity "mux2x1_32bit" for hierarchy "MIPS_ALU:inst14|mux2x1_32bit:b_mux"
+Info (12128): Elaborating entity "mux2x1_1bit" for hierarchy "MIPS_ALU:inst14|mux2x1_32bit:b_mux|mux2x1_1bit:mux31"
+Info (12128): Elaborating entity "ADDER32BITS_B" for hierarchy "MIPS_ALU:inst14|ADDER32BITS_B:adder"
+Info (12128): Elaborating entity "zerocomp32" for hierarchy "MIPS_ALU:inst14|zerocomp32:zerocomp"
+Warning (10036): Verilog HDL or VHDL warning at zerocomp32.vhd(12): object "gnd" assigned a value but never read
+Info (12128): Elaborating entity "mux4x1_32bit" for hierarchy "MIPS_ALU:inst14|mux4x1_32bit:mux"
+Info (12128): Elaborating entity "mux4x1_1bit" for hierarchy "MIPS_ALU:inst14|mux4x1_32bit:mux|mux4x1_1bit:mux31"
+Info (12128): Elaborating entity "lpm_constant2" for hierarchy "lpm_constant2:inst17"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant2:inst17|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant2:inst17|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant2:inst17|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "0"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "24"
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:inst22"
+Info (12128): Elaborating entity "asyncEightBitRegister" for hierarchy "registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst"
+Info (12128): Elaborating entity "d_latch" for hierarchy "registerFile:inst22|asyncEightBitRegister:\gen_registers:0:register_inst|d_latch:latch0"
+Info (12128): Elaborating entity "eightX8To8Mux" for hierarchy "registerFile:inst22|eightX8To8Mux:mux_read1"
+Info (12128): Elaborating entity "eightTo1Mux" for hierarchy "registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:0:block_mux:mux_inst"
+Info (12128): Elaborating entity "decoder3to8" for hierarchy "registerFile:inst22|decoder3to8:decoder"
+Info (12128): Elaborating entity "LPM_RAM_DQ" for hierarchy "LPM_RAM_DQ:inst1"
+Info (12130): Elaborated megafunction instantiation "LPM_RAM_DQ:inst1"
+Info (12133): Instantiated megafunction "LPM_RAM_DQ:inst1" with the following parameter:
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "data_memory.mif"
+    Info (12134): Parameter "LPM_INDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+Info (12128): Elaborating entity "altram" for hierarchy "LPM_RAM_DQ:inst1|altram:sram"
+Warning (287001): Assertion warning: altram does not support Cyclone IV E device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Cyclone IV E devices
+Info (12131): Elaborated megafunction instantiation "LPM_RAM_DQ:inst1|altram:sram", which is child of megafunction instantiation "LPM_RAM_DQ:inst1"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "LPM_RAM_DQ:inst1|altram:sram|altsyncram:ram_block"
+Info (12131): Elaborated megafunction instantiation "LPM_RAM_DQ:inst1|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "LPM_RAM_DQ:inst1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_38a1.tdf
+    Info (12023): Found entity 1: altsyncram_38a1
+Info (12128): Elaborating entity "altsyncram_38a1" for hierarchy "LPM_RAM_DQ:inst1|altram:sram|altsyncram:ram_block|altsyncram_38a1:auto_generated"
+Info (12128): Elaborating entity "mux5" for hierarchy "mux5:inst10"
+Info (12128): Elaborating entity "mux32x2" for hierarchy "mux32x2:inst21"
+Info (12128): Elaborating entity "sign_extender_16to32" for hierarchy "sign_extender_16to32:inst20"
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:inst27"
+Info (12128): Elaborating entity "eightBitALU" for hierarchy "eightBitALU:inst6"
+Info (12128): Elaborating entity "twoBy8To8Mux" for hierarchy "eightBitALU:inst6|twoBy8To8Mux:logical_select_mux"
+Info (12128): Elaborating entity "sorter" for hierarchy "eightBitALU:inst6|sorter:sorting"
+Warning (10036): Verilog HDL or VHDL warning at sorter.vhdl(34): object "eq" assigned a value but never read
+Info (12128): Elaborating entity "eightBitComparator" for hierarchy "eightBitALU:inst6|sorter:sorting|eightBitComparator:comp_inst"
+Info (12128): Elaborating entity "eightBitCLA" for hierarchy "eightBitALU:inst6|eightBitCLA:arithmetic_unit"
+Info (12128): Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:inst7"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst7|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant0:inst7|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant0:inst7|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "0"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "3"
+Info (12128): Elaborating entity "lpm_constant1" for hierarchy "lpm_constant1:inst8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant1:inst8|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant1:inst8|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant1:inst8|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "4"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "8"
+Info (12128): Elaborating entity "thirtyTwoBitALU" for hierarchy "thirtyTwoBitALU:inst30"
+Info (12128): Elaborating entity "twoBy32To32Mux" for hierarchy "thirtyTwoBitALU:inst30|twoBy32To32Mux:logical_select_mux"
+Info (12128): Elaborating entity "sorter32" for hierarchy "thirtyTwoBitALU:inst30|sorter32:sorting"
+Warning (10036): Verilog HDL or VHDL warning at sorter32.vhd(34): object "eq" assigned a value but never read
+Info (12128): Elaborating entity "thirtyTwoBitComparator" for hierarchy "thirtyTwoBitALU:inst30|sorter32:sorting|thirtyTwoBitComparator:comp_inst"
+Info (12128): Elaborating entity "thirtyTwoBitCLA" for hierarchy "thirtyTwoBitALU:inst30|thirtyTwoBitCLA:arithmetic_unit"
+Info (12128): Elaborating entity "or32" for hierarchy "thirtyTwoBitALU:inst30|or32:zero_calc"
+Info (12128): Elaborating entity "shift_left_2" for hierarchy "shift_left_2:inst28"
+Info (12128): Elaborating entity "lpm_constant3" for hierarchy "lpm_constant3:inst29"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant3:inst29|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant3:inst29|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant3:inst29|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "2"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "3"
+Info (12128): Elaborating entity "shift_left_2_26_to_28" for hierarchy "shift_left_2_26_to_28:inst2"
+Info (12128): Elaborating entity "mux8to1_8bit" for hierarchy "mux8to1_8bit:inst12"
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[31]" to the node "q[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[30]" to the node "q[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[29]" to the node "q[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[28]" to the node "q[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[27]" to the node "q[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[26]" to the node "q[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[22]" to the node "q[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[22]" to the node "rr1[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[21]" to the node "q[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[21]" to the node "rr1[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[23]" to the node "q[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[23]" to the node "rr1[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[17]" to the node "q[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[17]" to the node "rr2[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[16]" to the node "q[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[16]" to the node "rr2[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[18]" to the node "q[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[18]" to the node "rr2[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "q[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "input_PC_BTA[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "q[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "input_PC_BTA[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[13]" to the node "q[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[13]" to the node "input_PC_BTA[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[12]" to the node "q[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[12]" to the node "input_PC_BTA[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[11]" to the node "q[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[11]" to the node "input_PC_BTA[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "q[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "input_PC_BTA[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "q[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "input_PC_BTA[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "q[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "input_PC_BTA[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "q[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "input_PC_BTA[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "q[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "input_PC_BTA[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[5]" to the node "q[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[5]" to the node "input_PC_BTA[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[4]" to the node "q[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[4]" to the node "input_PC_BTA[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[3]" to the node "q[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[3]" to the node "input_PC_BTA[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[2]" to the node "q[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[2]" to the node "input_PC_BTA[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "q[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[1]" to the node "input_PC_BTA[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "q[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[0]" to the node "input_PC_BTA[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[25]" to the node "q[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[24]" to the node "q[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[20]" to the node "q[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[19]" to the node "q[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[15]" to the node "mux32x2:inst21|mux2:\gen_mux:31:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[14]" to the node "mux32x2:inst21|mux2:\gen_mux:14:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[10]" to the node "mux32x2:inst21|mux2:\gen_mux:10:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[9]" to the node "mux32x2:inst21|mux2:\gen_mux:9:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[8]" to the node "mux32x2:inst21|mux2:\gen_mux:8:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[7]" to the node "mux32x2:inst21|mux2:\gen_mux:7:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[6]" to the node "mux32x2:inst21|mux2:\gen_mux:6:mux_inst|y" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[25]" to the node "rr1[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[24]" to the node "rr1[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[20]" to the node "rr2[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "lpm_rom:inst|otri[19]" to the node "rr2[3]" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[31]" to the node "control_unit:inst9|Equal1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[30]" to the node "control_unit:inst9|Equal1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[29]" to the node "control_unit:inst9|Equal1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[28]" to the node "control_unit:inst9|Equal1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[27]" to the node "control_unit:inst9|Equal1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[26]" to the node "control_unit:inst9|Equal1" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[22]" to the node "registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:7:block_mux:mux_inst|O" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[21]" to the node "registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:7:block_mux:mux_inst|O" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[23]" to the node "registerFile:inst22|eightX8To8Mux:mux_read1|eightTo1Mux:\gen_mux:7:block_mux:mux_inst|O" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[17]" to the node "mux5:inst10|mux2:\gen_mux:1:mux_inst|y" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[16]" to the node "mux5:inst10|mux2:\gen_mux:0:mux_inst|y" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[18]" to the node "mux5:inst10|mux2:\gen_mux:2:mux_inst|y" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[13]" to the node "mux32x2:inst21|mux2:\gen_mux:13:mux_inst|y" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[12]" to the node "mux32x2:inst21|mux2:\gen_mux:12:mux_inst|y" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[11]" to the node "mux32x2:inst21|mux2:\gen_mux:11:mux_inst|y" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[5]" to the node "thirtyTwoBitALU:inst30|and_result[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[4]" to the node "thirtyTwoBitALU:inst30|and_result[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[3]" to the node "ALUControl:inst27|inst" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[2]" to the node "thirtyTwoBitALU:inst30|and_result[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[1]" to the node "thirtyTwoBitALU:inst30|and_result[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "lpm_rom:inst|otri[0]" to the node "ALUControl:inst27|inst" into an OR gate
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PCValue[1]" is stuck at GND
+    Warning (13410): Pin "PCValue[0]" is stuck at GND
+    Warning (13410): Pin "input_PC_BTA[1]" is stuck at GND
+    Warning (13410): Pin "input_PC_BTA[0]" is stuck at GND
+    Warning (13410): Pin "next_pc4[1]" is stuck at GND
+    Warning (13410): Pin "next_pc4[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 218 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 67 input pins
-    Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 110 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4667 megabytes
-    Info: Processing ended: Wed Mar 12 10:22:06 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info (21057): Implemented 493 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 126 output pins
+    Info (21061): Implemented 321 logic cells
+    Info (21064): Implemented 40 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 130 warnings
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Wed Mar 12 11:35:58 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

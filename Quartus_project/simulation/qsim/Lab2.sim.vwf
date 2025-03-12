@@ -1062,7 +1062,7 @@ SIGNAL("result[0]")
 	PARENT = "result";
 }
 
-SIGNAL("result8bot")
+SIGNAL("resultEITGHTBITS")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -1072,84 +1072,84 @@ SIGNAL("result8bot")
 	PARENT = "";
 }
 
-SIGNAL("result8bot[7]")
+SIGNAL("resultEITGHTBITS[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[6]")
+SIGNAL("resultEITGHTBITS[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[5]")
+SIGNAL("resultEITGHTBITS[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[4]")
+SIGNAL("resultEITGHTBITS[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[3]")
+SIGNAL("resultEITGHTBITS[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[2]")
+SIGNAL("resultEITGHTBITS[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[1]")
+SIGNAL("resultEITGHTBITS[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
-SIGNAL("result8bot[0]")
+SIGNAL("resultEITGHTBITS[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "result8bot";
+	PARENT = "resultEITGHTBITS";
 }
 
 SIGNAL("zero")
@@ -2041,7 +2041,7 @@ TRANSITION_LIST("result[31]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2054,7 +2054,7 @@ TRANSITION_LIST("result[30]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2067,7 +2067,7 @@ TRANSITION_LIST("result[29]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2080,7 +2080,7 @@ TRANSITION_LIST("result[28]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2093,7 +2093,7 @@ TRANSITION_LIST("result[27]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2106,7 +2106,7 @@ TRANSITION_LIST("result[26]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2119,7 +2119,7 @@ TRANSITION_LIST("result[25]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2132,7 +2132,7 @@ TRANSITION_LIST("result[24]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2145,7 +2145,7 @@ TRANSITION_LIST("result[23]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2158,7 +2158,7 @@ TRANSITION_LIST("result[22]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2171,7 +2171,7 @@ TRANSITION_LIST("result[21]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2184,7 +2184,7 @@ TRANSITION_LIST("result[20]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2197,7 +2197,7 @@ TRANSITION_LIST("result[19]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2210,7 +2210,7 @@ TRANSITION_LIST("result[18]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2223,7 +2223,7 @@ TRANSITION_LIST("result[17]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2236,7 +2236,7 @@ TRANSITION_LIST("result[16]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2249,7 +2249,7 @@ TRANSITION_LIST("result[15]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2262,7 +2262,7 @@ TRANSITION_LIST("result[14]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2275,7 +2275,7 @@ TRANSITION_LIST("result[13]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2288,7 +2288,7 @@ TRANSITION_LIST("result[12]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2301,7 +2301,7 @@ TRANSITION_LIST("result[11]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2314,7 +2314,7 @@ TRANSITION_LIST("result[10]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2327,7 +2327,7 @@ TRANSITION_LIST("result[9]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2340,7 +2340,7 @@ TRANSITION_LIST("result[8]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2353,7 +2353,7 @@ TRANSITION_LIST("result[7]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2379,7 +2379,7 @@ TRANSITION_LIST("result[5]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2405,7 +2405,7 @@ TRANSITION_LIST("result[3]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2431,7 +2431,7 @@ TRANSITION_LIST("result[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2444,25 +2444,12 @@ TRANSITION_LIST("result[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
 
-TRANSITION_LIST("result8bot[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
-		}
-	}
-}
-
-TRANSITION_LIST("result8bot[6]")
+TRANSITION_LIST("resultEITGHTBITS[7]")
 {
 	NODE
 	{
@@ -2475,20 +2462,7 @@ TRANSITION_LIST("result8bot[6]")
 	}
 }
 
-TRANSITION_LIST("result8bot[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
-		}
-	}
-}
-
-TRANSITION_LIST("result8bot[4]")
+TRANSITION_LIST("resultEITGHTBITS[6]")
 {
 	NODE
 	{
@@ -2501,20 +2475,7 @@ TRANSITION_LIST("result8bot[4]")
 	}
 }
 
-TRANSITION_LIST("result8bot[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
-		}
-	}
-}
-
-TRANSITION_LIST("result8bot[2]")
+TRANSITION_LIST("resultEITGHTBITS[5]")
 {
 	NODE
 	{
@@ -2527,7 +2488,7 @@ TRANSITION_LIST("result8bot[2]")
 	}
 }
 
-TRANSITION_LIST("result8bot[1]")
+TRANSITION_LIST("resultEITGHTBITS[4]")
 {
 	NODE
 	{
@@ -2535,12 +2496,12 @@ TRANSITION_LIST("result8bot[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
 
-TRANSITION_LIST("result8bot[0]")
+TRANSITION_LIST("resultEITGHTBITS[3]")
 {
 	NODE
 	{
@@ -2548,7 +2509,46 @@ TRANSITION_LIST("result8bot[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
+		}
+	}
+}
+
+TRANSITION_LIST("resultEITGHTBITS[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
+	}
+}
+
+TRANSITION_LIST("resultEITGHTBITS[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
+	}
+}
+
+TRANSITION_LIST("resultEITGHTBITS[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -2561,7 +2561,7 @@ TRANSITION_LIST("zero")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
 	}
 }
@@ -2900,7 +2900,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "ALU_ctrl";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Binary;
 	TREE_INDEX = 33;
 	TREE_LEVEL = 0;
 	CHILDREN = 34, 35, 36;
@@ -2910,7 +2910,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "ALU_ctrl[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Binary;
 	TREE_INDEX = 34;
 	TREE_LEVEL = 1;
 	PARENT = 33;
@@ -2920,7 +2920,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "ALU_ctrl[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Binary;
 	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
 	PARENT = 33;
@@ -2930,7 +2930,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "ALU_ctrl[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Binary;
 	TREE_INDEX = 36;
 	TREE_LEVEL = 1;
 	PARENT = 33;
@@ -3598,7 +3598,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot";
+	CHANNEL = "resultEITGHTBITS";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 103;
@@ -3608,7 +3608,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[7]";
+	CHANNEL = "resultEITGHTBITS[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 104;
@@ -3618,7 +3618,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[6]";
+	CHANNEL = "resultEITGHTBITS[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 105;
@@ -3628,7 +3628,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[5]";
+	CHANNEL = "resultEITGHTBITS[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 106;
@@ -3638,7 +3638,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[4]";
+	CHANNEL = "resultEITGHTBITS[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 107;
@@ -3648,7 +3648,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[3]";
+	CHANNEL = "resultEITGHTBITS[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 108;
@@ -3658,7 +3658,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[2]";
+	CHANNEL = "resultEITGHTBITS[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 109;
@@ -3668,7 +3668,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[1]";
+	CHANNEL = "resultEITGHTBITS[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 110;
@@ -3678,7 +3678,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "result8bot[0]";
+	CHANNEL = "resultEITGHTBITS[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Hexadecimal;
 	TREE_INDEX = 111;
@@ -3690,7 +3690,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "zero";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 112;
 	TREE_LEVEL = 0;
 }

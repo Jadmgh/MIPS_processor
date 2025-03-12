@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 2104 544 2288 560)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
-	(text "ValueSelect[2..0]" (rect 5 0 89 12)(font "Arial" ))
+	(text "ValueSelect[2..0]" (rect 5 0 88 12)(font "Arial" ))
 	(pt 184 8)
 	(drawing
 		(line (pt 100 12)(pt 125 12))
@@ -675,56 +675,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1384 272 1608 384)
-	(text "thirtyTwoBitALU" (rect 5 0 84 12)(font "Arial" ))
-	(text "inst19" (rect 8 96 37 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "A[31..0]" (rect 0 0 38 12)(font "Arial" ))
-		(text "A[31..0]" (rect 21 27 59 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "B[31..0]" (rect 0 0 38 12)(font "Arial" ))
-		(text "B[31..0]" (rect 21 43 59 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "ALU_control[2..0]" (rect 0 0 86 12)(font "Arial" ))
-		(text "ALU_control[2..0]" (rect 21 59 107 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 224 32)
-		(output)
-		(text "zero" (rect 0 0 20 12)(font "Arial" ))
-		(text "zero" (rect 187 27 207 39)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32))
-	)
-	(port
-		(pt 224 48)
-		(output)
-		(text "result[31..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "result[31..0]" (rect 154 43 213 55)(font "Arial" ))
-		(line (pt 224 48)(pt 208 48)(line_width 3))
-	)
-	(port
-		(pt 224 64)
-		(output)
-		(text "result8[7..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "result8[7..0]" (rect 154 59 213 71)(font "Arial" ))
-		(line (pt 224 64)(pt 208 64)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 208 96))
-	)
-)
-(symbol
 	(rect 920 480 1136 560)
 	(text "sign_extender_16to32" (rect 5 0 112 12)(font "Arial" ))
 	(text "inst20" (rect 8 64 37 76)(font "Arial" ))
@@ -1298,7 +1248,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 2328 392 2504 600)
+	(rect 2320 392 2496 600)
 	(text "mux8to1_8bit" (rect 5 0 71 12)(font "Arial" ))
 	(text "inst12" (rect 8 192 37 204)(font "Arial" ))
 	(port
@@ -1390,6 +1340,56 @@ applicable agreement for further details.
 		(line (pt 8 8)(pt 16 16))
 		(line (pt 16 16)(pt 24 8))
 		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 1400 280 1576 392)
+	(text "MIPS_ALU" (rect 5 0 58 12)(font "Arial" ))
+	(text "inst14" (rect 8 96 37 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a[31..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "a[31..0]" (rect 21 27 58 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "b[31..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "b[31..0]" (rect 21 43 58 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "op[2..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "op[2..0]" (rect 21 59 58 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "result[31..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "result[31..0]" (rect 106 27 165 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "zero" (rect 0 0 20 12)(font "Arial" ))
+		(text "zero" (rect 139 43 159 55)(font "Arial" ))
+		(line (pt 176 48)(pt 160 48))
+	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "cout" (rect 0 0 21 12)(font "Arial" ))
+		(text "cout" (rect 138 59 159 71)(font "Arial" ))
+		(line (pt 176 64)(pt 160 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 96))
 	)
 )
 (connector
@@ -1623,11 +1623,6 @@ applicable agreement for further details.
 	(pt 896 376)
 )
 (connector
-	(pt 1184 232)
-	(pt 1184 312)
-	(bus)
-)
-(connector
 	(pt 888 224)
 	(pt 888 312)
 	(bus)
@@ -1665,37 +1660,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1336 336)
-	(pt 1384 336)
-	(bus)
-)
-(connector
-	(pt 1376 448)
-	(pt 1376 320)
-	(bus)
-)
-(connector
-	(pt 1376 320)
-	(pt 1384 320)
-	(bus)
-)
-(connector
-	(text "rd1[31..0]" (rect 1280 288 1327 300)(font "Arial" ))
-	(pt 1280 304)
-	(pt 1384 304)
-	(bus)
-)
-(connector
-	(pt 1336 336)
-	(pt 1336 608)
-	(bus)
-)
-(connector
-	(pt 1336 608)
-	(pt 1336 632)
-	(bus)
-)
-(connector
 	(pt 1208 480)
 	(pt 1168 480)
 	(bus)
@@ -1722,10 +1686,6 @@ applicable agreement for further details.
 	(pt 2088 288)
 	(pt 2160 288)
 	(bus)
-)
-(connector
-	(pt 1608 304)
-	(pt 1632 304)
 )
 (connector
 	(pt 1336 72)
@@ -1886,10 +1846,6 @@ applicable agreement for further details.
 	(pt 1712 112)
 )
 (connector
-	(pt 1632 304)
-	(pt 1632 120)
-)
-(connector
 	(pt 1632 120)
 	(pt 1648 120)
 )
@@ -1914,11 +1870,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1368 448)
-	(pt 1376 448)
-	(bus)
-)
-(connector
 	(pt 1192 272)
 	(pt 1192 328)
 	(bus)
@@ -1931,17 +1882,6 @@ applicable agreement for further details.
 (connector
 	(pt 1200 328)
 	(pt 1200 552)
-	(bus)
-)
-(connector
-	(pt 1160 312)
-	(pt 1184 312)
-	(bus)
-)
-(connector
-	(text "rd1[7..0]" (rect 1216 296 1257 308)(font "Arial" ))
-	(pt 1184 312)
-	(pt 1240 312)
 	(bus)
 )
 (connector
@@ -1981,27 +1921,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1648 568)
-	(pt 1648 336)
-	(bus)
-)
-(connector
-	(text "ALUresult[7..0]" (rect 1608 320 1682 332)(font "Arial" ))
-	(pt 1608 336)
-	(pt 1648 336)
-	(bus)
-)
-(connector
-	(pt 1616 568)
-	(pt 1648 568)
-	(bus)
-)
-(connector
-	(pt 1648 568)
-	(pt 1680 568)
-	(bus)
-)
-(connector
 	(pt 232 288)
 	(pt 240 288)
 	(bus)
@@ -2010,45 +1929,6 @@ applicable agreement for further details.
 	(text "PCValue[7..0]" (rect 250 272 318 284)(font "Arial" ))
 	(pt 240 288)
 	(pt 304 288)
-	(bus)
-)
-(connector
-	(pt 2080 488)
-	(pt 2080 664)
-	(bus)
-)
-(connector
-	(pt 2080 664)
-	(pt 2080 776)
-	(bus)
-)
-(connector
-	(text "PCValue[7..0]" (rect 2250 408 2318 420)(font "Arial" ))
-	(pt 2264 424)
-	(pt 2328 424)
-	(bus)
-)
-(connector
-	(text "ALUresult[7..0]" (rect 2288 424 2362 436)(font "Arial" ))
-	(pt 2240 440)
-	(pt 2328 440)
-	(bus)
-)
-(connector
-	(text "rd1[7..0]" (rect 2304 440 2345 452)(font "Arial" ))
-	(pt 2248 456)
-	(pt 2328 456)
-	(bus)
-)
-(connector
-	(text "rd2[7..0]" (rect 2304 456 2345 468)(font "Arial" ))
-	(pt 2248 472)
-	(pt 2328 472)
-	(bus)
-)
-(connector
-	(pt 2080 488)
-	(pt 2328 488)
 	(bus)
 )
 (connector
@@ -2068,34 +1948,6 @@ applicable agreement for further details.
 	(text "muxOthers[7]" (rect 1042 -32 1109 -20)(font "Arial" ))
 	(pt 1104 -32)
 	(pt 1024 -32)
-)
-(connector
-	(text "muxOthers[7..0]" (rect 2258 488 2338 500)(font "Arial" ))
-	(pt 2328 504)
-	(pt 2248 504)
-	(bus)
-)
-(connector
-	(text "muxOthers[7..0]" (rect 2258 504 2338 516)(font "Arial" ))
-	(pt 2328 520)
-	(pt 2248 520)
-	(bus)
-)
-(connector
-	(text "muxOthers[7..0]" (rect 2258 520 2338 532)(font "Arial" ))
-	(pt 2328 536)
-	(pt 2248 536)
-	(bus)
-)
-(connector
-	(pt 2328 552)
-	(pt 2288 552)
-	(bus)
-)
-(connector
-	(pt 2504 424)
-	(pt 2536 424)
-	(bus)
 )
 (connector
 	(pt 920 48)
@@ -2225,6 +2077,157 @@ applicable agreement for further details.
 	(pt 1888 -104)
 	(bus)
 )
+(connector
+	(text "op2alu[31..0]" (rect 1368 432 1431 444)(font "Arial" ))
+	(pt 1368 448)
+	(pt 1408 448)
+	(bus)
+)
+(connector
+	(pt 1184 232)
+	(pt 1184 312)
+	(bus)
+)
+(connector
+	(pt 1160 312)
+	(pt 1184 312)
+	(bus)
+)
+(connector
+	(text "rd1[7..0]" (rect 1176 296 1217 308)(font "Arial" ))
+	(pt 1184 312)
+	(pt 1280 312)
+	(bus)
+)
+(connector
+	(text "ALUresult[7..0]" (rect 1568 400 1642 412)(font "Arial" ))
+	(pt 1568 416)
+	(pt 1640 416)
+	(bus)
+)
+(connector
+	(pt 1640 416)
+	(pt 1640 568)
+	(bus)
+)
+(connector
+	(pt 1616 568)
+	(pt 1640 568)
+	(bus)
+)
+(connector
+	(pt 1640 568)
+	(pt 1680 568)
+	(bus)
+)
+(connector
+	(text "PCValue[7..0]" (rect 2242 408 2310 420)(font "Arial" ))
+	(pt 2256 424)
+	(pt 2320 424)
+	(bus)
+)
+(connector
+	(text "ALUresult[7..0]" (rect 2280 424 2354 436)(font "Arial" ))
+	(pt 2232 440)
+	(pt 2320 440)
+	(bus)
+)
+(connector
+	(text "rd2[7..0]" (rect 2296 456 2337 468)(font "Arial" ))
+	(pt 2240 472)
+	(pt 2320 472)
+	(bus)
+)
+(connector
+	(pt 2080 488)
+	(pt 2320 488)
+	(bus)
+)
+(connector
+	(text "muxOthers[7..0]" (rect 2250 488 2330 500)(font "Arial" ))
+	(pt 2320 504)
+	(pt 2240 504)
+	(bus)
+)
+(connector
+	(text "muxOthers[7..0]" (rect 2250 504 2330 516)(font "Arial" ))
+	(pt 2320 520)
+	(pt 2240 520)
+	(bus)
+)
+(connector
+	(text "muxOthers[7..0]" (rect 2250 520 2330 532)(font "Arial" ))
+	(pt 2320 536)
+	(pt 2240 536)
+	(bus)
+)
+(connector
+	(pt 2288 552)
+	(pt 2320 552)
+	(bus)
+)
+(connector
+	(text "rd1[7..0]" (rect 2264 440 2305 452)(font "Arial" ))
+	(pt 2320 456)
+	(pt 2208 456)
+	(bus)
+)
+(connector
+	(pt 2536 424)
+	(pt 2496 424)
+	(bus)
+)
+(connector
+	(pt 2080 488)
+	(pt 2080 664)
+	(bus)
+)
+(connector
+	(pt 2080 664)
+	(pt 2080 776)
+	(bus)
+)
+(connector
+	(text "rd1[31..0]" (rect 1296 296 1343 308)(font "Arial" ))
+	(pt 1296 312)
+	(pt 1400 312)
+	(bus)
+)
+(connector
+	(pt 1336 344)
+	(pt 1400 344)
+	(bus)
+)
+(connector
+	(pt 1632 328)
+	(pt 1576 328)
+)
+(connector
+	(pt 1632 120)
+	(pt 1632 328)
+)
+(connector
+	(text "ALUresult[31..0]" (rect 1576 296 1656 308)(font "Arial" ))
+	(pt 1576 312)
+	(pt 1648 312)
+	(bus)
+)
+(connector
+	(pt 1336 344)
+	(pt 1336 608)
+	(bus)
+)
+(connector
+	(pt 1336 608)
+	(pt 1336 632)
+	(bus)
+)
+(connector
+	(text "op2alu[31..0]" (rect 1328 312 1391 324)(font "Arial" ))
+	(pt 1400 328)
+	(pt 1328 328)
+	(bus)
+)
 (junction (pt 240 288))
 (junction (pt 1664 600))
 (junction (pt 1816 584))
@@ -2240,4 +2243,4 @@ applicable agreement for further details.
 (junction (pt 2232 -120))
 (junction (pt 1200 328))
 (junction (pt 2080 664))
-(junction (pt 1648 568))
+(junction (pt 1640 568))

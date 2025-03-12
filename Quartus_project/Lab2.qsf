@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY testing_alu
+set_global_assignment -name TOP_LEVEL_ENTITY Lab2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:30:43  FEBRUARY 26, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -115,6 +115,20 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
 set_global_assignment -name VHDL_FILE shift_left_2_26_to_28.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
+set_global_assignment -name VHDL_FILE and2_32bit.vhd
+set_global_assignment -name VHDL_FILE or2_32bit.vhd
+set_global_assignment -name VHDL_FILE ADDER32BITS_B.vhd
+set_global_assignment -name VHDL_FILE mux4x1_32bit.vhd
+set_global_assignment -name VHDL_FILE not_32bit.vhd
+set_global_assignment -name VHDL_FILE zerocomp32.vhd
+set_global_assignment -name VHDL_FILE sltextend.vhd
+set_global_assignment -name VHDL_FILE MIPS_ALU.vhd
+set_global_assignment -name VHDL_FILE mux4x1_1bit.vhd
+set_global_assignment -name VHDL_FILE mux2x1_32bit.vhd
+set_global_assignment -name VHDL_FILE mux2x1_1bit.vhd
+set_global_assignment -name VHDL_FILE sorter32.vhd
+set_global_assignment -name VHDL_FILE thirtyTwoBitComparator.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

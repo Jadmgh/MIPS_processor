@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 104 192 272 208)
+	(rect 32 192 200 208)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "B[31..0]" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 104 208 272 224)
+	(rect 32 208 200 224)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "ALU_ctrl[2..0]" (rect 5 0 74 12)(font "Arial" ))
+	(text "ALU_ctrl[2..0]" (rect 5 0 73 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 104 176 272 192)
+	(rect 32 176 200 192)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A[31..0]" (rect 5 0 44 12)(font "Arial" ))
+	(text "A[31..0]" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 496 176 672 192)
+	(rect 616 176 792 192)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "zero" (rect 90 0 110 12)(font "Arial" ))
 	(pt 0 8)
@@ -85,7 +85,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 496 192 672 208)
+	(rect 552 192 728 208)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "result[31..0]" (rect 90 0 149 12)(font "Arial" ))
 	(pt 0 8)
@@ -101,9 +101,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 496 208 672 224)
+	(rect 584 208 795 224)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "result8bot[7..0]" (rect 90 0 164 12)(font "Arial" ))
+	(text "resultEITGHTBITS[7..0]" (rect 90 0 205 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -118,7 +118,7 @@ applicable agreement for further details.
 (symbol
 	(rect 272 152 496 264)
 	(text "thirtyTwoBitALU" (rect 5 0 84 12)(font "Arial" ))
-	(text "inst19" (rect 8 96 37 108)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -164,4 +164,33 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 208 96))
 	)
+)
+(connector
+	(pt 496 200)
+	(pt 552 200)
+	(bus)
+)
+(connector
+	(pt 272 184)
+	(pt 200 184)
+	(bus)
+)
+(connector
+	(pt 272 200)
+	(pt 200 200)
+	(bus)
+)
+(connector
+	(pt 272 216)
+	(pt 200 216)
+	(bus)
+)
+(connector
+	(pt 496 216)
+	(pt 584 216)
+	(bus)
+)
+(connector
+	(pt 496 184)
+	(pt 616 184)
 )
