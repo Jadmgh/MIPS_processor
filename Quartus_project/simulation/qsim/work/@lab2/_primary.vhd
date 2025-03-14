@@ -9,12 +9,17 @@ entity Lab2 is
         GClock          : in     vl_logic;
         rd1             : out    vl_logic_vector(7 downto 0);
         rd2             : out    vl_logic_vector(7 downto 0);
+        BranchOut       : out    vl_logic;
+        ZeroOut         : out    vl_logic;
+        MemWriteOut     : out    vl_logic;
+        MemReadOut      : out    vl_logic;
+        RegWriteOut     : out    vl_logic;
         input_PC_BTA    : out    vl_logic_vector(31 downto 0);
+        InstructionOut  : out    vl_logic_vector(31 downto 0);
         MuxOut          : out    vl_logic_vector(7 downto 0);
         ValueSelect     : in     vl_logic_vector(2 downto 0);
         next_pc4        : out    vl_logic_vector(7 downto 0);
         operation       : out    vl_logic_vector(2 downto 0);
-        q               : out    vl_logic_vector(31 downto 0);
         RAM_output      : out    vl_logic_vector(7 downto 0);
         rr1             : out    vl_logic_vector(4 downto 0);
         rr2             : out    vl_logic_vector(4 downto 0)

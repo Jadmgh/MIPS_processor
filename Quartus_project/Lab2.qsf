@@ -49,7 +49,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/jadme/Desktop/uOttawa/courses/Current_Courses/CEG_3156/CEG3156_Lab2/MIPS_processor/Quartus_project/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/jadme/Downloads/MIPS_processor-3d6027f261c21a0ff73975456114cfafef89e094/MIPS_processor-3d6027f261c21a0ff73975456114cfafef89e094/Quartus_project/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -115,20 +115,6 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
 set_global_assignment -name VHDL_FILE shift_left_2_26_to_28.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
-set_global_assignment -name VHDL_FILE and2_32bit.vhd
-set_global_assignment -name VHDL_FILE or2_32bit.vhd
-set_global_assignment -name VHDL_FILE ADDER32BITS_B.vhd
-set_global_assignment -name VHDL_FILE mux4x1_32bit.vhd
-set_global_assignment -name VHDL_FILE not_32bit.vhd
-set_global_assignment -name VHDL_FILE zerocomp32.vhd
-set_global_assignment -name VHDL_FILE sltextend.vhd
-set_global_assignment -name VHDL_FILE MIPS_ALU.vhd
-set_global_assignment -name VHDL_FILE mux4x1_1bit.vhd
-set_global_assignment -name VHDL_FILE mux2x1_32bit.vhd
-set_global_assignment -name VHDL_FILE mux2x1_1bit.vhd
-set_global_assignment -name VHDL_FILE sorter32.vhd
-set_global_assignment -name VHDL_FILE thirtyTwoBitComparator.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

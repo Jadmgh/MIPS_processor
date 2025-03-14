@@ -29,5 +29,6 @@
 # Loading work.Lab2_vlg_sample_tst
 # Loading work.Lab2_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Error: (vsim-3601) Iteration limit reached at time 235001 ps.
-# 
+# Simulation passed !
+# ** Note: $finish    : Waveform15.vwf.vt(1026)
+#    Time: 500 ns  Iteration: 0  Instance: /Lab2_vlg_vec_tst/tb_out
