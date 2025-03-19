@@ -863,7 +863,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1928 160 2040 208)
+	(rect 1952 184 2064 232)
 	(text "lpm_constant2" (rect 5 0 105 16)(font "Arial" (font_size 10)))
 	(text "inst183" (rect 8 32 43 44)(font "Arial" ))
 	(port
@@ -1745,12 +1745,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "rd1[31..0]" (rect 1280 288 1327 300)(font "Arial" ))
-	(pt 1280 304)
-	(pt 1384 304)
-	(bus)
-)
-(connector
 	(pt 1336 336)
 	(pt 1336 608)
 	(bus)
@@ -1768,12 +1762,6 @@ applicable agreement for further details.
 (connector
 	(pt 1136 512)
 	(pt 1168 512)
-	(bus)
-)
-(connector
-	(text "rd2[31..8]" (rect 2050 168 2097 180)(font "Arial" ))
-	(pt 2112 184)
-	(pt 2040 184)
 	(bus)
 )
 (connector
@@ -1913,21 +1901,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 2192 -120)
-	(pt 2232 -120)
-	(bus)
-)
-(connector
-	(pt 1168 -32)
-	(pt 1168 480)
-	(bus)
-)
-(connector
-	(pt 1168 480)
-	(pt 1168 512)
-	(bus)
-)
-(connector
 	(pt 1384 -56)
 	(pt 1384 -32)
 	(bus)
@@ -1962,16 +1935,6 @@ applicable agreement for further details.
 (connector
 	(pt 2232 -104)
 	(pt 2272 -104)
-	(bus)
-)
-(connector
-	(pt 2232 -168)
-	(pt 2232 -120)
-	(bus)
-)
-(connector
-	(pt 2232 -120)
-	(pt 2232 -104)
 	(bus)
 )
 (connector
@@ -2027,18 +1990,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 880 776)
-	(pt 880 360)
-	(bus)
-)
-(connector
 	(pt 2040 664)
 	(pt 2080 664)
-	(bus)
-)
-(connector
-	(pt 880 776)
-	(pt 2080 776)
 	(bus)
 )
 (connector
@@ -2071,16 +2024,6 @@ applicable agreement for further details.
 	(text "PCValue[7..0]" (rect 250 272 318 284)(font "Arial" ))
 	(pt 240 288)
 	(pt 304 288)
-	(bus)
-)
-(connector
-	(pt 2080 488)
-	(pt 2080 664)
-	(bus)
-)
-(connector
-	(pt 2080 664)
-	(pt 2080 776)
 	(bus)
 )
 (connector
@@ -2247,11 +2190,6 @@ applicable agreement for further details.
 	(pt 1720 0)
 )
 (connector
-	(text "muxOthers[5]" (rect 1946 -104 2013 -92)(font "Arial" ))
-	(pt 2016 -88)
-	(pt 1936 -88)
-)
-(connector
 	(text "muxOthers[5]" (rect 978 160 1045 172)(font "Arial" ))
 	(pt 912 176)
 	(pt 1048 176)
@@ -2264,22 +2202,6 @@ applicable agreement for further details.
 (connector
 	(pt 592 352)
 	(pt 640 352)
-)
-(connector
-	(pt 2016 -120)
-	(pt 1928 -120)
-	(bus)
-)
-(connector
-	(pt 1928 -32)
-	(pt 1928 -120)
-	(bus)
-)
-(connector
-	(text "JumpAddress[7..0]" (rect 1898 -120 1991 -108)(font "Arial" ))
-	(pt 2016 -104)
-	(pt 1888 -104)
-	(bus)
 )
 (connector
 	(text "Branch" (rect 922 128 956 140)(font "Arial" ))
@@ -2308,6 +2230,94 @@ applicable agreement for further details.
 	(text "RegWrite" (rect 922 80 968 92)(font "Arial" ))
 	(pt 912 96)
 	(pt 1008 96)
+)
+(connector
+	(pt 1168 -32)
+	(pt 1168 480)
+	(bus)
+)
+(connector
+	(pt 1168 480)
+	(pt 1168 512)
+	(bus)
+)
+(connector
+	(pt 2232 -120)
+	(pt 2192 -120)
+	(bus)
+)
+(connector
+	(pt 1928 -120)
+	(pt 2016 -120)
+	(bus)
+)
+(connector
+	(pt 1928 -32)
+	(pt 1928 -120)
+	(bus)
+)
+(connector
+	(pt 2232 -168)
+	(pt 2232 -120)
+	(bus)
+)
+(connector
+	(pt 2232 -120)
+	(pt 2232 -104)
+	(bus)
+)
+(connector
+	(text "muxOthers[5]" (rect 1946 -104 2013 -92)(font "Arial" ))
+	(pt 2016 -88)
+	(pt 1936 -88)
+)
+(connector
+	(text "JumpAddress[7..0]" (rect 1786 -120 1879 -108)(font "Arial" ))
+	(pt 2016 -104)
+	(pt 1776 -104)
+	(bus)
+)
+(connector
+	(pt 880 360)
+	(pt 880 776)
+	(bus)
+)
+(connector
+	(pt 880 776)
+	(pt 2080 776)
+	(bus)
+)
+(connector
+	(pt 2080 488)
+	(pt 2080 664)
+	(bus)
+)
+(connector
+	(pt 2080 664)
+	(pt 2080 776)
+	(bus)
+)
+(connector
+	(pt 1376 304)
+	(pt 1376 296)
+	(bus)
+)
+(connector
+	(pt 1384 304)
+	(pt 1376 304)
+	(bus)
+)
+(connector
+	(text "rd1[31..0]" (rect 1280 280 1327 292)(font "Arial" ))
+	(pt 1376 296)
+	(pt 1280 296)
+	(bus)
+)
+(connector
+	(text "rd2[31..8]" (rect 2074 192 2121 204)(font "Arial" ))
+	(pt 2136 208)
+	(pt 2064 208)
+	(bus)
 )
 (junction (pt 240 288))
 (junction (pt 1664 600))

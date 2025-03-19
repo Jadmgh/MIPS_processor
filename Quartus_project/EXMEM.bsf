@@ -1,0 +1,148 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 296 968)
+	(text "EXMEM" (rect 5 0 41 12)(font "Arial" ))
+	(text "inst" (rect 24 872 41 884)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "i_RegWrite" (rect 0 0 54 12)(font "Arial" ))
+		(text "i_RegWrite" (rect 21 91 75 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "i_MemtoReg" (rect 0 0 61 12)(font "Arial" ))
+		(text "i_MemtoReg" (rect 21 123 82 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "i_MemWrite" (rect 0 0 57 12)(font "Arial" ))
+		(text "i_MemWrite" (rect 21 187 78 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 216)
+		(input)
+		(text "i_MemRead" (rect 0 0 57 12)(font "Arial" ))
+		(text "i_MemRead" (rect 21 211 78 223)(font "Arial" ))
+		(line (pt 0 216)(pt 16 216))
+	)
+	(port
+		(pt 0 248)
+		(input)
+		(text "i_Branch" (rect 0 0 42 12)(font "Arial" ))
+		(text "i_Branch" (rect 21 243 63 255)(font "Arial" ))
+		(line (pt 0 248)(pt 16 248))
+	)
+	(port
+		(pt 0 496)
+		(input)
+		(text "i_aluresult[31..0]" (rect 0 0 81 12)(font "Arial" ))
+		(text "i_aluresult[31..0]" (rect 21 491 102 503)(font "Arial" ))
+		(line (pt 0 496)(pt 16 496)(line_width 3))
+	)
+	(port
+		(pt 0 680)
+		(input)
+		(text "i_writedata[31..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "i_writedata[31..0]" (rect 21 675 104 687)(font "Arial" ))
+		(line (pt 0 680)(pt 16 680)(line_width 3))
+	)
+	(port
+		(pt 0 800)
+		(input)
+		(text "i_destreg[4..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "i_destreg[4..0]" (rect 21 795 91 807)(font "Arial" ))
+		(line (pt 0 800)(pt 16 800)(line_width 3))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "o_RegWrite" (rect 0 0 57 12)(font "Arial" ))
+		(text "o_RegWrite" (rect 163 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "o_MemtoReg" (rect 0 0 64 12)(font "Arial" ))
+		(text "o_MemtoReg" (rect 157 123 211 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128))
+	)
+	(port
+		(pt 232 184)
+		(output)
+		(text "o_MemWrite" (rect 0 0 61 12)(font "Arial" ))
+		(text "o_MemWrite" (rect 160 179 211 191)(font "Arial" ))
+		(line (pt 232 184)(pt 216 184))
+	)
+	(port
+		(pt 232 216)
+		(output)
+		(text "o_MemRead" (rect 0 0 61 12)(font "Arial" ))
+		(text "o_MemRead" (rect 160 211 211 223)(font "Arial" ))
+		(line (pt 232 216)(pt 216 216))
+	)
+	(port
+		(pt 232 248)
+		(output)
+		(text "o_Branch" (rect 0 0 46 12)(font "Arial" ))
+		(text "o_Branch" (rect 173 243 211 255)(font "Arial" ))
+		(line (pt 232 248)(pt 216 248))
+	)
+	(port
+		(pt 232 488)
+		(output)
+		(text "o_aluresult[31..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "o_aluresult[31..0]" (rect 140 483 211 495)(font "Arial" ))
+		(line (pt 232 488)(pt 216 488)(line_width 3))
+	)
+	(port
+		(pt 232 680)
+		(output)
+		(text "o_writedata[31..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "o_writedata[31..0]" (rect 138 675 211 687)(font "Arial" ))
+		(line (pt 232 680)(pt 216 680)(line_width 3))
+	)
+	(port
+		(pt 232 800)
+		(output)
+		(text "o_destreg[4..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "o_destreg[4..0]" (rect 149 795 211 807)(font "Arial" ))
+		(line (pt 232 800)(pt 216 800)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 1 216 889))
+	)
+)

@@ -18,26 +18,26 @@ programming logic devices manufactured by Altera and sold by
 Altera or its authorized distributors.  Please refer to the 
 applicable agreement for further details.
 */
-(header "symbol" (version "1.1"))
+(header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 232 96)
-	(text "sign_extender_16to32" (rect 5 0 91 12)(font "Arial" ))
-	(text "inst" (rect 8 64 20 76)(font "Arial" ))
+	(rect 64 64 184 200)
+	(text "sign_extender_16to32" (rect 5 0 112 12)(font "Arial" ))
+	(text "inst" (rect 8 120 25 132)(font "Arial" ))
 	(port
-		(pt 0 32)
+		(pt 0 64)
 		(input)
-		(text "input_16[15..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "input_16[15..0]" (rect 21 27 76 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
+		(text "input_16[15..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "input_16[15..0]" (rect 24 48 97 60)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
-		(pt 216 32)
+		(pt 120 64)
 		(output)
-		(text "output_32[31..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "output_32[31..0]" (rect 133 27 195 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32)(line_width 3))
+		(text "output_32[31..0]" (rect -96 0 -16 12)(font "Arial" ))
+		(text "output_32[31..0]" (rect 16 64 96 76)(font "Arial" ))
+		(line (pt 120 64)(pt 104 64)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 200 64)(line_width 1))
+		(circle (rect 1 1 121 137))
 	)
 )

@@ -84,7 +84,7 @@ while True:
 
     # If it's an R-type, also print in the rs FUNCTION rt => rd format
     if instruction == "R-type":
-        # print(f"{rs} {funct_op} {rt} => {rd}")
+        print(f"{rs} {funct_op} {rt} => {rd}")
         print(f"{funct_op}, ${rd}, ${rs}, ${rt}")
 
     # If it's an lw instruction, print the details including the offset
