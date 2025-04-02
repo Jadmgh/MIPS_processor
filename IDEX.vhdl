@@ -1,57 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
---------------------------------------------------------------------------------
--- d_latch (provided)
---------------------------------------------------------------------------------
-entity d_latch is
-    Port ( D : in STD_LOGIC;
-           EN : in STD_LOGIC;
-           Q : out STD_LOGIC);
-end d_latch;
-
-architecture Structural of d_latch is
-    signal s, r, q_internal, q_not_internal : STD_LOGIC;
-begin
-    s <= EN nand D;
-    r <= EN nand (not D);
-    q_internal <= s nand q_not_internal;
-    q_not_internal <= r nand q_internal;
-    Q <= q_internal;
-end Structural;
-
---------------------------------------------------------------------------------
--- D Flip-Flop built from two d_latches (master-slave)
---------------------------------------------------------------------------------
-entity d_ff is
-    Port ( D   : in STD_LOGIC;
-           clk : in STD_LOGIC;
-           Q   : out STD_LOGIC);
-end d_ff;
-
-architecture Structural of d_ff is
-    signal master_out, clk_bar : STD_LOGIC;
-begin
-    clk_bar <= not clk;
-
-    master_latch: d_latch 
-        port map (
-            D  => D,
-            EN => clk_bar,  -- Transparent when clk is LOW
-            Q  => master_out
-        );
-
-    slave_latch: d_latch 
-        port map (
-            D  => master_out,
-            EN => clk,      -- Transparent when clk is HIGH
-            Q  => Q
-        );
-end Structural;
-
---------------------------------------------------------------------------------
--- IDEX Pipeline Register (Structural, gate-level using d_ff)
---------------------------------------------------------------------------------
 entity IDEX is
     port(
         clk           : in  std_logic;
