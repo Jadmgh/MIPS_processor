@@ -7,6 +7,7 @@ ENTITY eightBitRegisterInc IS
         i_Value      : IN  STD_LOGIC_VECTOR(7 downto 0);
         clk          : IN  STD_LOGIC;
         reset_bar        : IN  STD_LOGIC;
+		  en				: IN  STD_LOGIC;
         o_Value      : OUT STD_LOGIC_VECTOR(7 downto 0)
     );
 END eightBitRegisterInc;
@@ -22,7 +23,7 @@ signal load : std_logic;
 BEGIN
 	 load <='1';
     GEN_BITS: FOR i IN 0 TO 7 GENERATE
-        enabled(i) <= '1';
+        enabled(i) <= en;
         LOAD_MUX: ENTITY work.mux2
             PORT MAP(
                 sel  => load,

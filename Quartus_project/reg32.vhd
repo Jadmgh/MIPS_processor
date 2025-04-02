@@ -16,10 +16,10 @@ begin
 
 	process(clk,clr)
 	begin
-		if clr = '1' then --active-high reset
-			q <= (others => '0'); --set q to all zeroes on reset
-		elsif rising_edge(clk) then
-			if en = '1' then
+		if rising_edge(clk) then
+			if clr = '1' then --active-high reset
+				q <= (others => '0'); --set q to all zeroes on reset
+			elsif en = '1' then
 				q <= d;
 			end if;
 		end if;

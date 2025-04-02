@@ -1730,31 +1730,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1336 336)
-	(pt 1384 336)
-	(bus)
-)
-(connector
-	(pt 1376 448)
-	(pt 1376 320)
-	(bus)
-)
-(connector
-	(pt 1376 320)
-	(pt 1384 320)
-	(bus)
-)
-(connector
-	(pt 1336 336)
-	(pt 1336 608)
-	(bus)
-)
-(connector
-	(pt 1336 608)
-	(pt 1336 632)
-	(bus)
-)
-(connector
 	(pt 1208 480)
 	(pt 1168 480)
 	(bus)
@@ -1995,27 +1970,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1648 568)
-	(pt 1648 336)
-	(bus)
-)
-(connector
-	(text "ALUresult[7..0]" (rect 1608 320 1682 332)(font "Arial" ))
-	(pt 1608 336)
-	(pt 1648 336)
-	(bus)
-)
-(connector
-	(pt 1616 568)
-	(pt 1648 568)
-	(bus)
-)
-(connector
-	(pt 1648 568)
-	(pt 1680 568)
-	(bus)
-)
-(connector
 	(pt 232 288)
 	(pt 240 288)
 	(bus)
@@ -2209,14 +2163,6 @@ applicable agreement for further details.
 	(pt 1008 144)
 )
 (connector
-	(pt 1608 304)
-	(pt 1632 304)
-)
-(connector
-	(pt 1632 304)
-	(pt 1656 304)
-)
-(connector
 	(text "MemWrite" (rect 922 112 971 124)(font "Arial" ))
 	(pt 912 128)
 	(pt 1008 128)
@@ -2298,16 +2244,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1376 304)
-	(pt 1376 296)
-	(bus)
-)
-(connector
-	(pt 1384 304)
-	(pt 1376 304)
-	(bus)
-)
-(connector
 	(text "rd1[31..0]" (rect 1280 280 1327 292)(font "Arial" ))
 	(pt 1376 296)
 	(pt 1280 296)
@@ -2318,6 +2254,70 @@ applicable agreement for further details.
 	(pt 2136 208)
 	(pt 2064 208)
 	(bus)
+)
+(connector
+	(pt 1336 336)
+	(pt 1384 336)
+	(bus)
+)
+(connector
+	(pt 1376 448)
+	(pt 1376 320)
+	(bus)
+)
+(connector
+	(pt 1376 320)
+	(pt 1384 320)
+	(bus)
+)
+(connector
+	(pt 1648 568)
+	(pt 1648 336)
+	(bus)
+)
+(connector
+	(text "ALUresult[7..0]" (rect 1608 320 1682 332)(font "Arial" ))
+	(pt 1648 336)
+	(pt 1608 336)
+	(bus)
+)
+(connector
+	(pt 1376 296)
+	(pt 1376 304)
+	(bus)
+)
+(connector
+	(pt 1376 304)
+	(pt 1384 304)
+	(bus)
+)
+(connector
+	(pt 1336 336)
+	(pt 1336 608)
+	(bus)
+)
+(connector
+	(pt 1336 608)
+	(pt 1336 632)
+	(bus)
+)
+(connector
+	(pt 1616 568)
+	(pt 1648 568)
+	(bus)
+)
+(connector
+	(pt 1648 568)
+	(pt 1680 568)
+	(bus)
+)
+(connector
+	(pt 1608 304)
+	(pt 1632 304)
+)
+(connector
+	(pt 1632 304)
+	(pt 1656 304)
 )
 (junction (pt 240 288))
 (junction (pt 1664 600))

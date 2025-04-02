@@ -27,20 +27,22 @@ entity IDEX is
 			o_ALUSrc		  : out std_logic;
 			
 			--Datapath Signals
-			i_pc4			  : in std_logic_vector(31 downto 0);
-			i_a		 	  : in std_logic_vector(31 downto 0);
-			i_b		 	  : in std_logic_vector(31 downto 0);
+			i_pc4			  : in std_logic_vector(7 downto 0);
+			i_a		 	  : in std_logic_vector(7 downto 0);
+			i_b		 	  : in std_logic_vector(7 downto 0);
 			i_signext	  : in std_logic_vector(31 downto 0);
 			i_rs			  : in std_logic_vector(4 downto 0);
 			i_rt			  : in std_logic_vector(4 downto 0);
 			i_rd			  : in std_logic_vector(4 downto 0);
-			o_pc4			  : out std_logic_vector(31 downto 0);
-			o_a 	 		  : out std_logic_vector(31 downto 0);
-			o_b 	 		  : out std_logic_vector(31 downto 0);
+			i_instruction	  : in std_logic_vector(31 downto 0);
+			o_pc4			  : out std_logic_vector(7 downto 0);
+			o_a 	 		  : out std_logic_vector(7 downto 0);
+			o_b 	 		  : out std_logic_vector(7 downto 0);
 			o_signext	  : out std_logic_vector(31 downto 0);
 			o_rs			  : out std_logic_vector(4 downto 0);
 			o_rt			  : out std_logic_vector(4 downto 0);
-			o_rd			  : out std_logic_vector(4 downto 0));
+			o_rd			  : out std_logic_vector(4 downto 0);
+			o_instruction	  : out std_logic_vector(31 downto 0));
 end IDEX;
 
 architecture behavioural of IDEX is
@@ -72,6 +74,7 @@ begin
 			o_rt <= i_rt;
 			o_rd <= i_rd;
 			o_rs <= i_rs;
+			o_instruction <= i_instruction;
 			end if;
 	end process;
 	

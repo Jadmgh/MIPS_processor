@@ -8,7 +8,8 @@ entity registerFile is
         read_reg2  : in  std_logic_vector(4 downto 0);
         write_reg  : in  std_logic_vector(4 downto 0);
         write_data : in  std_logic_vector(7 downto 0);
-		  RegWrite : in std_logic;
+        RegWrite   : in  std_logic;
+        RESET      : in  std_logic;  -- Added Reset
         read_data1 : out std_logic_vector(7 downto 0);
         read_data2 : out std_logic_vector(7 downto 0)
     );
@@ -27,9 +28,10 @@ architecture Structural of registerFile is
 
     component asyncEightBitRegister is
         Port (
-            D  : in  std_logic_vector(7 downto 0);
-            EN : in  std_logic;
-            Q  : out std_logic_vector(7 downto 0)
+            D     : in  std_logic_vector(7 downto 0);
+            EN    : in  std_logic;
+            RESET : in  std_logic;
+            Q     : out std_logic_vector(7 downto 0)
         );
     end component;
 
@@ -47,21 +49,20 @@ architecture Structural of registerFile is
             O  : out std_logic_vector(7 downto 0)
         );
     end component;
-	 
-	 component decoder3to8 IS
-    PORT(
-        i_addr : IN  STD_LOGIC_VECTOR(2 DOWNTO 0);  -- 3-bit input address
-        o_dec  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  -- 8-bit one-hot output
-    );
-	 end component;
+
+    component decoder3to8 IS
+        PORT(
+            i_addr : IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
+            o_dec  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+        );
+    end component;
+
     -- Signal declarations for register outputs and enable signals
     type reg_array is array (0 to 7) of std_logic_vector(7 downto 0);
     signal reg_outputs : reg_array;
 
-    type enable_array is array (0 to 7) of std_logic;
-    signal enable_signals : enable_array;
-	
-	 signal writePermission: std_LOGIC_VECTOR(7 downto 0);
+    signal writePermission : std_logic_vector(7 downto 0);
+
 begin
 
     -- Generate loop to create 8 registers and associated enablers
@@ -70,10 +71,10 @@ begin
     begin            
         register_inst: asyncEightBitRegister
             port map (
-                D  => write_data,
-                EN => RegWrite and writePermission(i),
-                Q  => reg_outputs(i)
-
+                D     => write_data,
+                EN    => RegWrite and writePermission(i),
+                RESET => RESET,
+                Q     => reg_outputs(i)
             );
     end generate;
 
@@ -104,10 +105,10 @@ begin
         S  => read_reg2(2 downto 0),
         O  => read_data2
     );
-	 
-	 decoder : decoder3to8 port map(
-			i_addr => write_reg(2 downto 0),
-			o_dec  => writePermission
-	 );
-	 
+
+    decoder : decoder3to8 port map(
+        i_addr => write_reg(2 downto 0),
+        o_dec  => writePermission
+    );
+
 end Structural;

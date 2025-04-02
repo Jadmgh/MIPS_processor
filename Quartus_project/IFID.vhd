@@ -30,7 +30,7 @@ begin
 
 	--Port Map
 	pcreg  : reg32 port map(i_32_pc4, en, flush, clk, o_32_pc4);
-	insreg : reg32 port map(i_ins, en, flush, clk, o_pc4);
+	insreg : reg32 port map(i_ins, en, flush, clk, o_ins);
 	o_pc4 <= o_32_pc4(7 downto 0);
 	i_32_pc4 <= (31 downto 8 => '0') & i_pc4(7 downto 0);
 

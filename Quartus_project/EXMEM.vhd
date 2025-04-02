@@ -19,12 +19,15 @@ entity EXMEM is
 			o_Branch		  : out std_logic;
 						
 			--Datapath Signals
-			i_aluresult	  : in std_logic_vector(31 downto 0);
-			i_writedata	  : in std_logic_vector(31 downto 0);
+			i_aluresult	  : in std_logic_vector(7 downto 0);
+			i_writedata	  : in std_logic_vector(7 downto 0);
 			i_destreg	  : in std_logic_vector(4 downto 0);
-			o_aluresult	  : out std_logic_vector(31 downto 0);
-			o_writedata	  : out std_logic_vector(31 downto 0);
-			o_destreg	  : out std_logic_vector(4 downto 0));
+			i_instruction	  : in std_logic_vector(31 downto 0);
+			o_aluresult	  : out std_logic_vector(7 downto 0);
+			o_writedata	  : out std_logic_vector(7 downto 0);
+			o_destreg	  : out std_logic_vector(4 downto 0);
+			o_instruction	  : out std_logic_vector(31 downto 0));
+
 end EXMEM;
 
 architecture behavioural of EXMEM is
@@ -47,6 +50,7 @@ begin
 			o_aluresult <= i_aluresult;
 			o_writedata <= i_writedata;
 			o_destreg <= i_destreg;
+			o_instruction <= i_instruction;
 		end if;
 	end process;
 	

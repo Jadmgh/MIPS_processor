@@ -3,111 +3,111 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'GClock'
-Slack : -15.511
-TNS   : -89.749
+Slack : -7.382
+TNS   : -600.131
 
 Type  : Slow 1200mV 85C Model Setup 'RAM_Clock'
-Slack : -13.264
-TNS   : -46.765
+Slack : -2.204
+TNS   : -17.756
 
-Type  : Slow 1200mV 85C Model Setup 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -10.590
-TNS   : -565.220
+Type  : Slow 1200mV 85C Model Setup 'MEMWB:inst32|o_RegWrite'
+Slack : -1.353
+TNS   : -26.951
 
-Type  : Slow 1200mV 85C Model Hold 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -2.840
-TNS   : -134.620
-
-Type  : Slow 1200mV 85C Model Hold 'RAM_Clock'
-Slack : 0.235
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Hold 'MEMWB:inst32|o_RegWrite'
+Slack : -1.151
+TNS   : -27.876
 
 Type  : Slow 1200mV 85C Model Hold 'GClock'
-Slack : 0.404
+Slack : 0.111
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RAM_Clock'
-Slack : -3.000
-TNS   : -38.009
+Type  : Slow 1200mV 85C Model Hold 'RAM_Clock'
+Slack : 0.265
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GClock'
 Slack : -3.000
-TNS   : -10.710
+TNS   : -274.135
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.302
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RAM_Clock'
+Slack : -3.000
+TNS   : -35.316
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MEMWB:inst32|o_RegWrite'
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'GClock'
-Slack : -13.940
-TNS   : -80.680
+Slack : -6.624
+TNS   : -527.462
 
 Type  : Slow 1200mV 0C Model Setup 'RAM_Clock'
-Slack : -11.933
-TNS   : -41.404
+Slack : -1.907
+TNS   : -15.284
 
-Type  : Slow 1200mV 0C Model Setup 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -9.653
-TNS   : -514.463
+Type  : Slow 1200mV 0C Model Setup 'MEMWB:inst32|o_RegWrite'
+Slack : -1.345
+TNS   : -28.729
 
-Type  : Slow 1200mV 0C Model Hold 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -2.425
-TNS   : -118.393
-
-Type  : Slow 1200mV 0C Model Hold 'RAM_Clock'
-Slack : 0.195
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Hold 'MEMWB:inst32|o_RegWrite'
+Slack : -0.896
+TNS   : -17.370
 
 Type  : Slow 1200mV 0C Model Hold 'GClock'
-Slack : 0.356
+Slack : 0.112
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RAM_Clock'
-Slack : -3.000
-TNS   : -37.437
+Type  : Slow 1200mV 0C Model Hold 'RAM_Clock'
+Slack : 0.279
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GClock'
 Slack : -3.000
-TNS   : -10.710
+TNS   : -274.135
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.337
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RAM_Clock'
+Slack : -3.000
+TNS   : -34.788
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MEMWB:inst32|o_RegWrite'
+Slack : 0.383
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'GClock'
-Slack : -7.218
-TNS   : -41.788
+Slack : -3.557
+TNS   : -245.379
 
 Type  : Fast 1200mV 0C Model Setup 'RAM_Clock'
-Slack : -6.153
-TNS   : -15.610
+Slack : -0.324
+TNS   : -2.592
 
-Type  : Fast 1200mV 0C Model Setup 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -4.919
-TNS   : -265.441
+Type  : Fast 1200mV 0C Model Setup 'MEMWB:inst32|o_RegWrite'
+Slack : -0.304
+TNS   : -0.431
 
-Type  : Fast 1200mV 0C Model Hold 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : -1.822
-TNS   : -87.572
-
-Type  : Fast 1200mV 0C Model Hold 'RAM_Clock'
-Slack : -0.033
-TNS   : -0.033
+Type  : Fast 1200mV 0C Model Hold 'MEMWB:inst32|o_RegWrite'
+Slack : -0.529
+TNS   : -10.714
 
 Type  : Fast 1200mV 0C Model Hold 'GClock'
-Slack : 0.034
-TNS   : 0.000
+Slack : -0.054
+TNS   : -0.104
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RAM_Clock'
-Slack : -3.000
-TNS   : -17.490
+Type  : Fast 1200mV 0C Model Hold 'RAM_Clock'
+Slack : 0.077
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GClock'
 Slack : -3.000
-TNS   : -9.366
+TNS   : -227.801
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_t811:auto_generated|ram_block1a0~porta_address_reg0'
-Slack : 0.146
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RAM_Clock'
+Slack : -3.000
+TNS   : -16.504
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MEMWB:inst32|o_RegWrite'
+Slack : 0.211
 TNS   : 0.000
 
 ------------------------------------------------------------
